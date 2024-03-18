@@ -6,7 +6,7 @@ import FooterSection from "./FooterSection";
 
 export default function Footer() {
   return (
-    <footer className="bg-white w-full border-t border-gray-200 px-[120px] grid grid-cols-5 py-5">
+    <footer className="bg-white w-full border-t border-gray-200 px-[120px] grid grid-cols-5 py-8">
       <Image
         src="/h-logo.png"
         alt="Union logo"
@@ -14,34 +14,42 @@ export default function Footer() {
         height={40}
         priority
       />
-      <FooterSection title={"Sei lá"} texts={["Texto", "Texto", "Texto"]} />
       <FooterSection
-        title={"Faço a menor ideia"}
-        texts={["Texto", "Texto", "Texto"]}
+        title={"Recursos"}
+        texts={["Documentação", "Estudos de Caso", "FAQ", "Suporte ao Cliente"]}
       />
       <FooterSection
-        title={"Muito menos aqui"}
-        texts={["Texto", "Texto", "Texto", "Texto"]}
+        title={"Sobre a Union"}
+        texts={["Equipe", "História", "Missão e Valores", "Parceiros"]}
+      />
+      <FooterSection
+        title={"Legalidade"}
+        texts={[
+          "Conformidade Regulatória",
+          "Cookies",
+          "Privacidade",
+          "Termos de Serviço",
+        ]}
       />
       <div>
-        <p className="font-semibold text-black text-xl">Newsletter???</p>
-        <div className="bg-wm-main-background py-2 px-4 rounded-md mt-5 flex items-center justify-between border-2 border-wm-border-color">
+        <p className="font-semibold text-black text-xl">
+          Assine nossa Newsletter
+        </p>
+        <form className="relative mt-5 flex items-center">
           <input
             type="email"
             placeholder="Digite seu email"
             required
-            className="valid:text-blue-400 peer outline-none border-none text-black bg-transparent placeholder:italic placeholder:text-wm-p-color placeholder:opacity-50"
+            className="bg-wm-main-background w-full py-2 px-4 pr-36 outline-none border-2 valid:border-blue-400 border-wm-border-color text-wm-p-color focus:border-blue-400 rounded-md peer"
           />
-          <button className="text-sm bg-black h-full rounded-md px-4 py-1 text-white pointer-events-none peer-valid:bg-blue-400 peer-valid:pointer-events-auto">
+          <button className="bg-black text-sm rounded-md px-4 peer-valid:opacity-100 peer-valid:bg-blue-400 hover:opacity-60 text-white py-1 absolute right-4">
             Inscreva-se
           </button>
-        </div>
+        </form>
       </div>
 
       <div className="col-span-5 *:text-wm-p-color flex justify-between items-center mt-20">
-        <p>@2024 Union, Inc.</p>
-        <p>00.000.000/0000-00</p>
-        <p>Rua Paralelepípedo, N° 1238 em Algum Lugar - Brasil</p>
+        <p>&copy; 2024 Union, Inc. - Todos os direitos reservados.</p>
       </div>
     </footer>
   );
