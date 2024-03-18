@@ -88,8 +88,8 @@ export default function Home() {
       </section>
       <section className="w-full flex flex-col gap-10 items-center">
         <h2 className="text-7xl text-black font-semibold">
-          "<span className="font-bold text-blue-400">Union</span>, feita de
-          união"
+          &quot;<span className="font-bold text-blue-400">Union</span>, feita de
+          união&quot;
         </h2>
         <div className="grid grid-cols-4 auto-rows-[minmax(320px,_auto)] w-full gap-5 *:overflow-hidden relative">
           <GridItem link="Link 1" />
