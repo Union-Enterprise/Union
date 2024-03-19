@@ -5,7 +5,7 @@ export default function FooterSection({ title = "", texts = [""] }) {
       {texts.map((text, index) => (
         <p
           key={index}
-          className="text-wm-p-color hover:text-blue-400 cursor-pointer w-fit"
+          className="text-wm-p-color hover:text-tertiary-blue cursor-pointer w-fit"
         >
           {text}
         </p>

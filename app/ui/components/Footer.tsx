@@ -40,9 +40,9 @@ export default function Footer() {
             type="email"
             placeholder="Digite seu email"
             required
-            className="bg-wm-main-background w-full py-2 px-4 pr-36 outline-none border-2 valid:border-blue-400 border-wm-border-color text-wm-p-color focus:border-blue-400 rounded-md peer"
+            className="bg-wm-main-background w-full py-2 px-4 pr-36 outline-none border-2 valid:border-tertiary-blue border-wm-border-color text-wm-p-color focus:border-tertiary-blue rounded-md peer"
           />
-          <button className="bg-black text-sm rounded-md px-4 peer-valid:opacity-100 peer-valid:bg-blue-400 hover:opacity-60 text-white py-1 absolute right-4">
+          <button className="bg-black text-sm rounded-md px-4 peer-valid:opacity-100 peer-valid:bg-tertiary-blue hover:opacity-60 text-white py-1 absolute right-4">
             Inscreva-se
           </button>
         </form>

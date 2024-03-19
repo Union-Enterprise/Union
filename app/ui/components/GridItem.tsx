@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function GridItem({ colSpan = "1", rowSpan = "1", link = "A" }) {
+export default function GridItem({ cols = 1, rows = 1, text = "Link" }) {
   return (
     <div
-      className={`border-2 border-wm-border-color hover:rounded-xl hover:translate-y-[-15px] col-span-${colSpan} row-span-${rowSpan} flex justify-center items-center relative group`}
+      className={`border-2 border-wm-border-color hover:rounded-xl hover:translate-y-[-15px] col-span-${cols} row-span-${rows} flex justify-center items-center relative group min-h-[300px]`}
     >
       <Image
         src="/default-image.png"
@@ -19,7 +19,7 @@ export default function GridItem({ colSpan = "1", rowSpan = "1", link = "A" }) {
           href={""}
           className="bg-white px-10 rounded-full text-sm py-1 text-wm-p-color"
         >
-          <p>{link}</p>
+          <p>{text}</p>
         </Link>
       </div>
     </div>

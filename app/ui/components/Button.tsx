@@ -5,7 +5,7 @@ export default function Button({ text = "" }) {
     <Link
       key={""}
       href={""}
-      className="bg-black py-3 px-8 w-fit rounded-sm hover:border-blue-400 hover:bg-transparent border-2 hover:text-blue-400"
+      className="bg-black py-3 px-8 w-fit rounded-sm hover:border-tertiary-blue hover:bg-transparent border-2 hover:text-tertiary-blue"
     >
       <p>{text}</p>
     </Link>

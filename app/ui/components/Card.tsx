@@ -6,7 +6,7 @@ export default function Card({ title = "", description = "" }) {
     <Link
       key={"products-services"}
       href={"../products/"}
-      className=" hover:translate-y-[-20px] border-2 rounded-lg hover:border-blue-400 overflow-hidden h-fit"
+      className=" hover:translate-y-[-20px] border-2 rounded-lg hover:border-tertiary-blue overflow-hidden h-fit"
     >
       <div className="h-[250px] bg-wm-main-background w-full flex justify-center items-center border-b-2 border-wm-border-color">
         <Image

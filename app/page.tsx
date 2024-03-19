@@ -9,13 +9,15 @@ export default function Home() {
     <main className="bg-wm-main-background flex h-full flex-col items-center justify-between px-[120px] pb-[400px] gap-[200px]">
       <section className="h-screen justify-center flex flex-col items-center *:text-center">
         <Image
-          src="/blue-logo.svg"
+          src="/dark-blue-logo.svg"
           alt="Union Logo"
           width={300}
           height={50}
           priority
         />
-        <h1 className="text-8xl font-bold text-black mt-10">Unindo o Mundo</h1>
+        <h1 className="text-8xl font-bold text-black mt-10">
+          Conectando o Mundo
+        </h1>
         <p className="text-wm-p-color text-2xl px-[350px] my-6">
           Transformando ideias em realidade, somos a ponte para a inovação no
           universo tecnológico. Nossas soluções inovadoras impulsionam empresas
@@ -56,7 +58,7 @@ export default function Home() {
           <h3 className="text-6xl text-black font-bold">
             Tire suas ideias do papel em minutos
           </h3>
-          <p className="bg-blue-50 text-blue-400 rounded-md w-fit px-4 py-1">
+          <p className="bg-blue-50 text-tertiary-blue rounded-md w-fit px-4 py-1">
             Faça seus planos com a <span className="font-semibold">Union</span>
           </p>
           <div className="mr-20 flex flex-col gap-y-4">
@@ -88,16 +90,16 @@ export default function Home() {
       </section>
       <section className="w-full flex flex-col gap-10 items-center">
         <h2 className="text-7xl text-black font-semibold">
-          &quot;<span className="font-bold text-blue-400">Union</span>, feita de
-          união&quot;
+          &quot;<span className="font-bold text-tertiary-blue">Union</span>,
+          feita de união&quot;.
         </h2>
-        <div className="grid grid-cols-4 auto-rows-[minmax(320px,_auto)] w-full gap-5 *:overflow-hidden relative">
-          <GridItem link="Link 1" />
-          <GridItem colSpan={"2"} link="Link 2" />
-          <GridItem rowSpan={"2"} link="Link 3" />
-          <GridItem link="Link 4" />
-          <GridItem link="Link 5" />
-          <GridItem link="Link 6" />
+        <div className="grid grid-cols-4 grid-rows-2 w-full gap-5 relative">
+          <GridItem text="Link 1" />
+          <GridItem cols={1} text="Link 2" />
+          <GridItem rows={2} text="Link 3" />
+          <GridItem text="Link 4" />
+          <GridItem text="Link 5" />
+          <GridItem text="Link 6" />
           <div
             className="absolute bottom-[-150px] w-full flex flex-col items-center pt-[150px] justify-center"
             style={{

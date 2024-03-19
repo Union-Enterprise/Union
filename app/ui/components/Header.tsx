@@ -17,13 +17,23 @@ const links = [
 export default function Header() {
   return (
     <header className="bg-[rgba(255,255,255,0.8)] backdrop-saturate-[1.8] backdrop-blur-sm w-full h-[60px] border-b-2 border-[#eaeaea] flex justify-between items-center px-[120px] fixed top-0 z-[999]">
-      <Image
-        src="/h-logo.png"
-        alt="Union Logo"
-        width={155}
-        height={40}
-        priority
-      />
+      <Link key={"home"} href={"/"} className="flex gap-5 group cursor-pointer">
+        <Image
+          src="/h-logo-icon.svg"
+          alt="Union Logo icon"
+          width={36}
+          height={40}
+          priority
+          className="group-hover:rotate-45 duration-300"
+        />
+        <Image
+          src="/h-logo-name.svg"
+          alt="Union Logo name"
+          width={100}
+          height={40}
+          priority
+        />
+      </Link>
       <div className="flex gap-10">
         {links.map((link) => (
           <Link
@@ -36,10 +46,10 @@ export default function Header() {
         ))}
       </div>
       <div className="flex gap-5 items-center">
-        <p className="border-wm-border-color border-2 text-black py-2 px-4 rounded-md cursor-pointer hover:border-blue-400 hover:text-blue-400">
+        <p className="border-wm-border-color border-2 text-black py-2 px-4 rounded-md cursor-pointer hover:border-tertiary-blue hover:text-tertiary-blue">
           Fale Conosco
         </p>
-        <p className="text-white py-2 px-4 rounded-md bg-black cursor-pointer hover:bg-blue-400">
+        <p className="text-white py-2 px-4 rounded-md bg-black cursor-pointer hover:bg-tertiary-blue">
           Conheça
         </p>
       </div>

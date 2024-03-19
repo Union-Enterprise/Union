@@ -17,6 +17,8 @@ const config: Config = {
         "wm-main-background": "#FAFAFA",
         "wm-p-color": "rgba(0, 0, 0, 0.6)",
         "wm-border-color": "#F1F1F1",
+        "tertiary-blue": "#071B43",
+        // "tertiary-blue": "#5EA4F9"
       },
     },
   },
