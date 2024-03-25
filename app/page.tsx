@@ -1,29 +1,57 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Card from "./ui/components/Card";
 import GridItem from "./ui/components/GridItem";
 import Button from "./ui/components/Button";
+import Logo from "./ui/components/Logo";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="bg-wm-main-background flex h-full flex-col items-center justify-between px-[120px] pb-[400px] gap-[200px]">
-      <section className="h-screen justify-center flex flex-col items-center *:text-center">
-        <Image
-          src="/dark-blue-logo.svg"
-          alt="Union Logo"
-          width={300}
-          height={50}
-          priority
-        />
-        <h1 className="text-8xl font-bold text-black mt-10">
+    <main className="bg-wm-main-background flex h-full flex-col items-center justify-between pb-[400px] gap-[200px]">
+      <section className="h-screen w-full px-[120px] pt-[80px] bg-gradient-to-br from-linear-dark-blue via-linear-black to-linear-dark-blue justify-center flex flex-col gap-14 items-center">
+        <Logo />
+        <motion.h2
+          initial={{ x: -200, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{
+            duration: 2,
+            bounce: 0.5,
+            type: "spring",
+          }}
+          className="text-semibold text-7xl"
+        >
           Conectando o Mundo
-        </h1>
-        <p className="text-wm-p-color text-2xl px-[350px] my-6">
-          Transformando ideias em realidade, somos a ponte para a inovação no
-          universo tecnológico. Nossas soluções inovadoras impulsionam empresas
-          como a sua a atingir novos patamares de eficiência e sucesso.
-        </p>
-        <Button text="Conheça nossos serviços" />
+        </motion.h2>
+        <div className="self-start max-w-[40%] flex flex-col gap-7">
+          <motion.p
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            className="font-semibold text-3xl"
+          >
+            Transformando ideias em realidade, somos a ponte para a inovação.
+          </motion.p>
+          <motion.p
+            initial={{ x: -200, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              delay: 0.5,
+              duration: 1,
+              ease: "easeInOut",
+            }}
+            className="text-xl text-p-white"
+          >
+            Nossas soluções inovadoras impulsionam empresas como a sua a atingir
+            novos patamares de eficiência e sucesso.
+          </motion.p>
+          <Button text="Conheça" animate={true} />
+        </div>
       </section>
       <section className="flex flex-col items-center w-full">
         <h3 className="text-6xl text-black font-bold">Quem é a Union?</h3>

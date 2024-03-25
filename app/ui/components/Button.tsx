@@ -1,13 +1,27 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 
-export default function Button({ text = "" }) {
+export default function Button({ text = "", animate = false }) {
+  const animationProps = animate
+    ? {
+        initial: { x: -200, opacity: 0 },
+        animate: { x: 0, opacity: 1 },
+        transition: {
+          delay: 1,
+          duration: 1,
+          ease: "easeInOut",
+        },
+      }
+    : {};
+
   return (
-    <Link
-      key={""}
-      href={""}
-      className="bg-black py-3 px-8 w-fit rounded-sm hover:border-tertiary-blue hover:bg-transparent border-2 hover:text-tertiary-blue"
+    <motion.div
+      className="text-white py-2 px-6 rounded-md w-fit bg-main-purple duration-200 cursor-pointer border-2 border-transparent hover:border-main-purple hover:bg-transparent hover:px-8"
+      {...animationProps}
     >
-      <p>{text}</p>
-    </Link>
+      <Link key={"#"} href={"#"}>
+        {text}
+      </Link>
+    </motion.div>
   );
 }

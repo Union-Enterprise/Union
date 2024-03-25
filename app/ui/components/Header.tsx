@@ -2,57 +2,80 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import Button from "./Button";
+import LogoIcon from "./LogoIcon";
 
 const links = [
-  {
-    key: "products-services",
-    href: "../products/",
-    text: "Produtos e Serviços",
-  },
-  { key: "developers", href: "../developers/", text: "Desenvolvedores" },
-  { key: "enterprise", href: "../enterprise/", text: "A Empresa" },
-  { key: "partners", href: "../partners/", text: "Parceiros" },
+  [
+    {
+      key: "products-services",
+      href: "../products/",
+      text: "Produtos e Serviços",
+    },
+
+    { key: "partners", href: "../partners/", text: "Parceiros" },
+  ],
+  [
+    { key: "developers", href: "../developers/", text: "Desenvolvedores" },
+    { key: "enterprise", href: "../enterprise/", text: "A Empresa" },
+  ],
 ];
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const checkScroll = () => {
+    setIsScrolled(window.scrollY > 0);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScroll);
+    return () => window.removeEventListener("scroll", checkScroll);
+  });
   return (
-    <header className="bg-[rgba(255,255,255,0.8)] backdrop-saturate-[1.8] backdrop-blur-sm w-full h-[60px] border-b-2 border-[#eaeaea] flex justify-between items-center px-[120px] fixed top-0 z-[999]">
-      <Link key={"home"} href={"/"} className="flex gap-5 group cursor-pointer">
-        <Image
-          src="/h-logo-icon.svg"
-          alt="Union Logo icon"
-          width={36}
-          height={40}
-          priority
-          className="group-hover:rotate-45 duration-300"
-        />
-        <Image
-          src="/h-logo-name.svg"
-          alt="Union Logo name"
-          width={100}
-          height={40}
-          priority
-        />
-      </Link>
-      <div className="flex gap-10">
-        {links.map((link) => (
+    <>
+      <header
+        className={`${
+          isScrolled
+            ? "bg-[rgba(0,0,0,0.4)] backdrop-saturate-[1.8] backdrop-blur-xl"
+            : "bg-transparent opacity-100"
+        }  w-full flex justify-between items-center px-[100px] h-[80px] fixed top-0 z-[999]`}
+      >
+        <div className="flex gap-10 items-center">
+          <div className={`${"bg-[rgba(0,0,0,0.4)] "}`}></div>
           <Link
-            key={link.key}
-            href={link.href}
-            className="text-wm-p-color hover:text-black duration-100"
+            key={"home"}
+            href={"/"}
+            className="flex gap-5 group cursor-pointer"
           >
-            <p>{link.text}</p>
+            <LogoIcon />
           </Link>
-        ))}
-      </div>
-      <div className="flex gap-5 items-center">
-        <p className="border-wm-border-color border-2 text-black py-2 px-4 rounded-md cursor-pointer hover:border-tertiary-blue hover:text-tertiary-blue">
-          Fale Conosco
-        </p>
-        <p className="text-white py-2 px-4 rounded-md bg-black cursor-pointer hover:bg-tertiary-blue">
-          Conheça
-        </p>
-      </div>
-    </header>
+          <div className="flex gap-10">
+            {links[0].map((link) => (
+              <Link
+                key={link.key}
+                href={link.href}
+                className="text-white hover:text-main-purple duration-100"
+              >
+                <p>{link.text}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="flex gap-10 items-center">
+          {links[1].map((link) => (
+            <Link
+              key={link.key}
+              href={link.href}
+              className="text-white hover:text-main-purple duration-100"
+            >
+              <p>{link.text}</p>
+            </Link>
+          ))}
+          <Button text="Conheça" />
+        </div>
+      </header>
+    </>
   );
 }
