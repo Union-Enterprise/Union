@@ -10,8 +10,8 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="bg-wm-main-background flex h-full flex-col items-center justify-between pb-[400px] gap-[200px]">
-      <section className="h-screen w-full px-[120px] pt-[80px] bg-gradient-to-br from-linear-dark-blue via-linear-black to-linear-dark-blue justify-center flex flex-col gap-14 items-center">
+    <main className="bg-wm-main-background flex h-full flex-col items-center justify-between *:py-[200px]">
+      <section className="h-screen w-full px-[120px] bg-gradient-to-br from-linear-dark-blue via-linear-black to-linear-dark-blue justify-center flex flex-col gap-14 items-center">
         <Logo />
         <motion.h2
           initial={{ x: -200, opacity: 0 }}
@@ -25,7 +25,7 @@ export default function Home() {
         >
           Conectando o Mundo
         </motion.h2>
-        <div className="self-start max-w-[40%] flex flex-col gap-7">
+        {/* <div className="self-start max-w-[40%] flex flex-col gap-7">
           <motion.p
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -51,9 +51,9 @@ export default function Home() {
             novos patamares de eficiência e sucesso.
           </motion.p>
           <Button text="Conheça" animate={true} />
-        </div>
+        </div> */}
       </section>
-      <section className="flex flex-col items-center w-full">
+      {/* <section className="flex flex-col items-center w-full">
         <h3 className="text-6xl text-black font-bold">Quem é a Union?</h3>
         <p className="text-wm-p-color text-2xl mt-5 text-center">
           Somos tudo aquilo que for necessário para o seu sucesso.
@@ -80,33 +80,28 @@ export default function Home() {
             description="Oferecemos soluções de alto nível a preços acessíveis. Nosso objetivo é fornecer um excelente retorno sobre seu investimento, ajudando-o a economizar tempo e recursos enquanto dedica-se a atingir o que realmente importa, suas metas e sonhos."
           />
         </div>
-      </section>
-      <section className="grid grid-cols-2 gap-[10vw]">
-        <div className="flex flex-col gap-y-7">
+      </section> */}
+      {/* <section className="flex flex-col gap-5 px-[120px]">
+        <div className="flex flex-col gap-10">
           <h3 className="text-6xl text-black font-bold">
             Tire suas ideias do papel em minutos
           </h3>
-          <p className="bg-blue-50 text-tertiary-blue rounded-md w-fit px-4 py-1">
-            Faça seus planos com a <span className="font-semibold">Union</span>
-          </p>
-          <div className="mr-20 flex flex-col gap-y-4">
-            <p className="text-wm-p-color text-xl">
+          <div className="grid grid-cols-3 w-full border-2 group border-wm-border-color hover:border-main-purple *:text-black group *:hover:text-white hover:bg-light-gray rounded-3xl p-10">
+            <p className="border-l-2 border-main-purple pl-5 group-hover:border-dashed">
               Na Union, entendemos que cada grande projeto começa com uma ideia.
-              É por isso focamos em agilizar o processo de transformar conceitos
-              em realidade.
+              É por isso que focamos em agilizar o processo de transformar
+              conceitos em realidade.
             </p>
-            <p className="text-wm-p-color text-xl">
+            <p className="border-l-2 border-main-purple pl-5 hover:border-dashed ml-20">
               Com uma equipe treinada e criativa, você pode começar a trabalhar
               em suas ideias imediatamente, sem obstáculos.
             </p>
-            <p className="text-wm-p-color text-xl">
-              Seja qual for seu objetivo, estamos aqui para ajudá-lo a
-              alcançá-lo.
-            </p>
+            <div className="flex justify-end items-end">
+              <Button text="Fale Conosco" />
+            </div>
           </div>
-          <Button text="Fale Conosco" />
         </div>
-        <div className="overflow-hidden h-[600px] flex justify-center items-center border-2 border-wm-border-color rounded-xl">
+        <div className="overflow-hidden h-[500px] bg-wm-main-background border-wm-border-color flex justify-center items-center border-2 hover:border-main-purple rounded-3xl">
           <Image
             src="/default-image.png"
             alt="Union Logo"
@@ -115,13 +110,16 @@ export default function Home() {
             priority
           />
         </div>
-      </section>
+      </section> */}
       <section className="w-full flex flex-col gap-10 items-center">
-        <h2 className="text-7xl text-black font-semibold">
-          &quot;<span className="font-bold text-tertiary-blue">Union</span>,
-          feita de união&quot;.
-        </h2>
-        <div className="grid grid-cols-4 grid-rows-2 w-full gap-5 relative">
+        <div>
+          <h2 className="font-bold text-9xl text-main-purple">&quot;Union,</h2>
+          <h3 className="text-7xl text-black font-normal ml-2">
+            feitos de união
+            <span className="text-8xl text-main-purple">&quot;</span>
+          </h3>
+        </div>
+        {/* <div className="grid grid-cols-4 grid-rows-2 w-full gap-5 relative">
           <GridItem text="Link 1" />
           <GridItem cols={1} text="Link 2" />
           <GridItem rows={2} text="Link 3" />
@@ -145,7 +143,7 @@ export default function Home() {
             </p>
             <Button text="Conheça nossos Devs" />
           </div>
-        </div>
+        </div> */}
       </section>
     </main>
   );

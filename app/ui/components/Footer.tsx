@@ -38,7 +38,7 @@ export default function Footer() {
             "Termos de Serviço",
           ]}
         />
-        <div className="col-span-4 flex justify-between items-center border-t-2 border-white-b pt-5">
+        <div className="col-span-4 flex justify-between items-center border-t-2 border-white-border pt-5">
           <p>&copy; 2024 Union, Inc. - Todos os direitos reservados.</p>
         </div>
       </div>

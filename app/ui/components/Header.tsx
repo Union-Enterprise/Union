@@ -38,7 +38,7 @@ export default function Header() {
       <header
         className={`${
           isScrolled
-            ? "bg-[rgba(0,0,0,0.4)] backdrop-saturate-[1.8] backdrop-blur-xl"
+            ? "bg-[rgba(0,0,0,0.6)] backdrop-saturate-[1.8] backdrop-blur-xl"
             : "bg-transparent opacity-100"
         }  w-full flex justify-between items-center px-[100px] h-[80px] fixed top-0 z-[999]`}
       >
