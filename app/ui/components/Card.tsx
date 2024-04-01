@@ -125,8 +125,8 @@ export default function Card({ title = "", description = "" }) {
                         </motion.p>                           
                     </div>
                     <motion.div
-                      initial={{y: -200, opacity: 0}}
-                      animate={{y: 0, opacity:1}}
+                      initial={{x: -200, opacity: 0}}
+                      animate={{x: 0, opacity:1}}
                       transition={{
                         delay: 6,
                         duration: 1,

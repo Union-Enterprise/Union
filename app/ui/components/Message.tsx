@@ -43,7 +43,7 @@ export default function Message(){
                  duration: 1,
                  ease: "easeInOut",
                }}
-               className=" border border-gray-600 rounded-md h-14 w-[290px] text-sm relative focus-within:border-main-purple "
+               className=" border border-gray-600 rounded-md h-14 w-[286px] text-sm relative focus-within:border-main-purple "
             >
               <input type="text" className="w-full h-full px-4 pt-3 outline-none bg-transparent text-white rounded-md focus-within:border-main-purple peer focus:placeholder-main-purple" placeholder="Nome" autoComplete="off" />
             </motion.div>
@@ -99,7 +99,7 @@ export default function Message(){
             }}
             className=" border border-gray-600 rounded-md h-[300px] w-[581px] text-sm relative focus-within:border-main-purple "
             >
-            <input type="text" className="w-full h-full px-4 pt-3 outline-none bg-transparent text-white rounded-md focus-within:border-main-purple peer focus:placeholder-main-purple" placeholder="Menssagem" autoComplete="off" />
+            <input type="text" className="w-full h-full px-4 pt-3 outline-none bg-transparent text-white rounded-md focus-within:border-main-purple peer focus:placeholder-main-purple pb-[260px]" placeholder="Menssagem" autoComplete="off" />
             </motion.div>
           </div>
           <motion.div
