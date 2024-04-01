@@ -16,7 +16,7 @@ export default function Button({ text = "", animate = false }) {
 
   return (
     <motion.div
-      className="text-white py-2 px-6 rounded-md w-fit h-fit bg-main-purple duration-200 cursor-pointer border-2 border-transparent hover:border-main-purple hover:bg-transparent hover:px-8 whitespace-nowrap"
+      className="text-white py-2 px-6 rounded-md w-fit bg-main-purple duration-200 cursor-pointer border-2 border-transparent hover:border-main-purple hover:bg-transparent hover:px-8"
       {...animationProps}
     >
       <Link key={"#"} href={"#"}>

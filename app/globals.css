@@ -2,10 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+
 *,
 *::before,
 *::after {
   transition: 0.1s ease;
+}
+:root{
+  --check-purple: #8651FF;
+}
+
+input[text]:focus ~ input-text{
+    @apply text-main-purple bg-black transform -translate-y-9 -translate-x-4;
+}
+
+label[for="customCheckbox"]::before {
+  content: "";
+  display: inline-block;
+  background-image: url('../public/check.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--check-purple);
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  align-items: center;
 }
 
 :root {

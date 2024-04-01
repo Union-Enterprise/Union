@@ -14,6 +14,8 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
+        "card-dark": "#121316",
+        "back-card": "#C6DAF7",
         "wm-main-background": "#FAFAFA",
         "wm-p-color": "rgba(0, 0, 0, 0.6)",
         "wm-border-color": "#F1F1F1",
@@ -32,8 +34,14 @@ const config: Config = {
         "white-border": "rgba(255 ,255 ,255, 0.2)",
         "p-white": "rgba(255, 255, 255, 0.6)",
       },
+      accentColor: {
+        'purple': '#8651FF',
+      }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
+
 };
 export default config;

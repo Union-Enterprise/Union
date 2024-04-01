@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import FooterSection from "./FooterSection";
 import LogoIcon from "./LogoIcon";
+import Button from "./Button";
+import Message from "./Message";
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-gray w-full px-[100px] pt-[100px] pb-[50px]">
+    <><Message /><footer className="bg-dark-gray w-full px-[100px] pt-[100px] pb-[50px]">
       <div className="bg-light-gray px-[80px] py-[40px] grid grid-cols-4 items-start rounded-3xl gap-y-10 *:text-p-white">
         <Link
           key={"home"}
@@ -23,12 +25,10 @@ export default function Footer() {
             "Estudos de Caso",
             "FAQ",
             "Suporte ao Cliente",
-          ]}
-        />
+          ]} />
         <FooterSection
           title={"Sobre a Union"}
-          texts={["Equipe", "História", "Missão e Valores", "Parceiros"]}
-        />
+          texts={["Equipe", "História", "Missão e Valores", "Parceiros"]} />
         <FooterSection
           title={"Legalidade"}
           texts={[
@@ -36,12 +36,11 @@ export default function Footer() {
             "Cookies",
             "Privacidade",
             "Termos de Serviço",
-          ]}
-        />
-        <div className="col-span-4 flex justify-between items-center border-t-2 border-white-border pt-5">
+          ]} />
+        <div className="col-span-4 flex justify-between items-center border-t-2 border-white-b pt-5">
           <p>&copy; 2024 Union, Inc. - Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>
+    </footer></>
   );
 }
