@@ -5,11 +5,10 @@ import Link from "next/link";
 import FooterSection from "./FooterSection";
 import LogoIcon from "./LogoIcon";
 import Button from "./Button";
-import Message from "./Message";
 
 export default function Footer() {
   return (
-    <><Message /><footer className="bg-dark-gray w-full px-[100px] pt-[100px] pb-[50px]">
+    <footer className="bg-dark-gray w-full px-[100px] pt-[100px] pb-[50px]">
       <div className="bg-light-gray px-[80px] py-[40px] grid grid-cols-4 items-start rounded-3xl gap-y-10 *:text-p-white">
         <Link
           key={"home"}
@@ -41,6 +40,6 @@ export default function Footer() {
           <p>&copy; 2024 Union, Inc. - Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer></>
+    </footer>
   );
 }
