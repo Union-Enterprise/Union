@@ -73,7 +73,9 @@ export default function Header() {
               <p>{link.text}</p>
             </Link>
           ))}
-          <Button text="Conheça" />
+          <Button>
+            <p>Conhecer</p>
+          </Button>
         </div>
       </header>
     </>

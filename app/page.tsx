@@ -1,141 +1,173 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
-import GridItem from "./ui/components/GridItem";
 import Button from "./ui/components/Button";
-import Logo from "./ui/components/Logo";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Card from "./ui/components/Card";
 import FormInputGroup from "./ui/components/FormInputGroup";
+import DevsCircle from "./ui/components/DevsCircle";
+import Topic from "./ui/components/Topic";
+import CarrousselButtons from "./ui/components/CarrousselButtons";
+import { faCode, faDesktop, faMobile } from "@fortawesome/free-solid-svg-icons";
+import LogoIcon from "./ui/components/LogoIcon";
 
 export default function Home() {
   return (
-    <main className="bg-wm-main-background flex h-full flex-col items-center justify-between gap-[200px] *:px-[120px] *:w-full">
-      <section className="h-screen bg-gradient-to-br from-linear-dark-blue via-linear-black to-linear-dark-blue justify-center flex flex-col gap-14 items-center">
-        <Logo />
-        <motion.h2
-          initial={{ x: -200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            duration: 2,
-            bounce: 0.5,
-            type: "spring",
-          }}
-          className="text-semibold text-7xl"
-        >
-          Conectando o Mundo
-        </motion.h2>
-        {/* <div className="self-start max-w-[40%] flex flex-col gap-7">
-          <motion.p
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{
-              duration: 1,
-              ease: "easeInOut",
-            }}
-            className="font-semibold text-3xl"
-          >
-            Transformando ideias em realidade, somos a ponte para a inovação.
-          </motion.p>
-          <motion.p
-            initial={{ x: -200, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{
-              delay: 0.5,
-              duration: 1,
-              ease: "easeInOut",
-            }}
-            className="text-xl text-p-white"
-          >
-            Nossas soluções inovadoras impulsionam empresas como a sua a atingir
-            novos patamares de eficiência e sucesso.
-          </motion.p>
-          <Button text="Conheça" animate={true} />
-        </div> */}
+    <main className="bg-wm-main-background flex h-full flex-col items-center justify-between *:w-full">
+      <section className="relative h-screen bg-gradient-radial from-[rgba(10,10,10,1)] to-[rgba(4,4,4,1)] justify-center flex flex-col gap-10 items-center">
+        <h1 className="text-8xl text-center font-bold leading-[7rem]">
+          Inovação Social através <br /> da tecnologia
+        </h1>
+        <p className="text-p-gray max-w-[50%] text-xl text-center">
+          Union, criada com apenas um propósito: melhorar a sociedade através de
+          inovação. Desenvolvemos soluções que não apenas atendem às
+          necessidades tecnológicas, mas também promovem mudanças positivas na
+          sociedade.
+        </p>
+        <Button>
+          <p>
+            Crie com a <span className="font-bold">Union</span>
+          </p>
+        </Button>
       </section>
-      <section className="flex flex-col items-center">
-        <motion.h3
-          initial={{ x: -200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            delay: 0.5,
-            duration: 1,
-            ease: "easeInOut",
-          }}
-          className="text-6xl text-black font-bold"
-        >
-          Quem é a Union?
-        </motion.h3>
-        <motion.p
-          initial={{ x: -200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            delay: 1,
-            duration: 1,
-            ease: "easeInOut",
-          }}
-          className="text-wm-p-color text-2xl mt-5 text-center"
-        >
-          Somos tudo aquilo que for necessário para o seu sucesso.
-        </motion.p>
-        <motion.p
-          initial={{ x: -200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            delay: 1.5,
-            duration: 1,
-            ease: "easeInOut",
-          }}
-          className="text-wm-p-color text-2xl mb-14 mt-4 max-w-[40vw] text-center"
-        >
-          E estamos comprometidos a fornecer soluções que atendam e impulsionem
-          os seus objetivos para o próximo nível.
-        </motion.p>
-        <Card />
-      </section>
-      <section className="flex flex-col gap-5">
-        <div className="flex flex-col gap-10">
-          <h3 className="text-6xl text-black font-bold">
-            Tire suas ideias do papel em minutos
-          </h3>
-          <div className="grid grid-cols-3 w-full border-2 group border-wm-border-color hover:border-main-purple *:text-black group *:hover:text-white hover:bg-light-gray rounded-3xl p-10">
-            <p className="border-l-2 border-main-purple pl-5 group-hover:border-dashed">
-              Na Union, entendemos que cada grande projeto começa com uma ideia.
-              É por isso que focamos em agilizar o processo de transformar
-              conceitos em realidade.
-            </p>
-            <p className="border-l-2 border-main-purple pl-5 group-hover:border-dashed ml-20">
-              Com uma equipe treinada e criativa, você pode começar a trabalhar
-              em suas ideias imediatamente, sem obstáculos.
-            </p>
-            <div className="flex justify-end items-end">
-              <Button text="Fale Conosco" />
-            </div>
+      <section className="flex flex-col gap-20 py-[160px] px-[200px]">
+        <div className="flex flex-col gap-6 max-w-[45%]">
+          <h2 className="text-7xl text-p-black font-semibold">
+            Por que desenvolver com a Union?
+          </h2>
+          <p className="text-2xl text-p-black">
+            Sempre estamos comprometidos a fornecer soluções que atendam e
+            impulsionem os seus objetivos e te levem ao próximo nível.
+          </p>
+        </div>
+
+        <div className=" grid grid-cols-2 gap-[150px] h-[3500px]">
+          <div className="">
+            <div className="bg-[#151515] h-[800px] sticky top-[115px]"></div>
+          </div>
+          <div className="flex flex-col justify-between my-[350px]">
+            <Topic />
+            <Topic />
+            <Topic />
+            <Topic />
           </div>
         </div>
-        <div className="overflow-hidden h-[500px] bg-black flex justify-center items-center border-2 hover:border-main-purple rounded-3xl"></div>
       </section>
-      <section className="flex flex-col gap-10 items-center">
-        <div className="flex flex-col self-start">
-          <h2 className="font-bold text-9xl text-main-purple">&quot;Union,</h2>
-          <h3 className="text-7xl text-black font-normal ml-[10vw] ">
-            feitos de união
-            <span className="text-9xl font-bold text-main-purple">&quot;</span>
-          </h3>
-        </div>
-        <div className="grid grid-cols-4 w-full gap-5 h-[90vh] relative border-t-2 border-main-purple border-opacity-30 pt-12">
-          <GridItem cols={2} />
-          <GridItem rows={2} />
-          <GridItem />
-          <GridItem cols={2} rows={2} />
-          <GridItem rows={2} />
-          <GridItem />
+      <section className="flex flex-col gap-5 pb-[160px] px-[200px]">
+        <div className="flex flex-col gap-20">
+          <div className="flex flex-col gap-5 max-w-[55%]">
+            <h2 className="text-7xl text-black font-semibold">
+              Tudo que você precisa em um só lugar
+            </h2>
+            <p className="text-2xl text-p-black">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et
+              tellus sit amet nunc mollis viverra. Mauris felis dui, eleifend
+              interdum efficitur eget, semper egestas nunc. Aliquam vitae
+              placerat risus.
+            </p>
+            <Button>
+              <p className="group-hover/button:text-black">
+                Crie com a <span className="font-bold">Union</span>
+              </p>
+            </Button>
+          </div>
+          <div className="flex justify-between gap-5 *:text-black">
+            <Card
+              title="Softwares"
+              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum modi
+        commodi ut inventore minima delectus natus totam ipsam, quidem autem"
+              icon={faCode}
+            />
+            <Card
+              title="Projetos Web"
+              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum modi
+        commodi ut inventore minima delectus natus totam ipsam, quidem autem"
+              icon={faDesktop}
+            />
+            <Card
+              title="Mobile Apps"
+              description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum modi
+        commodi ut inventore minima delectus natus totam ipsam, quidem autem"
+              icon={faMobile}
+            />
+          </div>
         </div>
       </section>
-      <section className="bg-[#151619] h-screen overflow-hidden grid grid-cols-2 gap-[10vw] py-[120px]">
+      <section className="bg-[#040404] relative h-[100vh] px-[200px] py-[160px] flex justify-center overflow-hidden">
+        <div
+          id="radial"
+          className=" w-full bg-gradient-to-b from-[rgba(9,9,9,0)] from-80% to-[rgba(4,4,4,1)] h-full z-20 absolute left-0 top-0 pointer-events-none"
+        />
+        <h2 className="text-7xl text-center font-semibold">
+          Conheça os desenvolvedores <br /> dos seus próximos projetos
+        </h2>
+
+        <button className="text-p-gray text-xl absolute bottom-5 z-50 hover:text-p-white">
+          Ver todos &gt;
+        </button>
+
+        <DevsCircle />
+      </section>
+      <section className="bg-[#040404] h-[300vh] py-[160px] px-[200px] flex justify-center relative">
+        <div className="absolute top-0 left-0 w-full h-full pt-[160px] pb-[250px]">
+          <h2 className="text-6xl font-bold text-black bg-white p-8 h-fit flex items-end w-fit mx-auto rounded-md sticky top-[45%] hover:bg-main-purple hover:text-white group/union duration-200 cursor-pointer z-50">
+            <LogoIcon width={180} height={50} minY={75} />, conectando o mundo
+          </h2>
+        </div>
+        <div className="mx-[20px] my-[160px] relative w-full">
+          <div className="bg-[#101010] rounded-md w-[720px] h-[400px] absolute left-0 top-10">
+            Texto
+          </div>
+          <div className="bg-[#101010] rounded-md w-[350px] h-[780px] absolute right-[200px] top-[250px]">
+            Texto
+          </div>
+          <div className="bg-[#101010] rounded-md w-[380px] h-[800px] absolute left-[150px] top-[600px]">
+            Texto
+          </div>
+          <div className="bg-[#101010] rounded-md w-[600px] h-[600px] absolute right-[100px] bottom-[600px]">
+            Texto
+          </div>
+          <div className="bg-[#101010] rounded-md w-[840px] h-[450px] absolute right-0 bottom-0">
+            Texto
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#040404] border-t-2 border-[#181818] py-[160px] flex flex-col justify-center items-center gap-10">
+        <h2 className="font-semibold text-8xl text-center">
+          Pronto para começar <br /> a criar?
+        </h2>
+        <p className="text-p-gray text-2xl text-center">
+          Junte-se a nós e começe a desenvolver os mais criativos projetos.
+        </p>
+        <Button>
+          <p>Começar a criar</p>
+        </Button>
+      </section>
+      <section className="bg-[#f0f0f0] border-t-2 border-[#181818] py-[160px] h-[100vh] flex flex-col gap-10 relative">
+        <div className="flex justify-between items-end mx-[200px]">
+          <h2 className="text-7xl text-black font-semibold">
+            Conheça também <br /> nossos parceiros
+          </h2>
+          <CarrousselButtons />
+        </div>
+        <div
+          id="partners"
+          className="h-full w-full flex gap-5 px-[200px] overflow-x-hidden"
+        >
+          <div className="bg-white p-10 text-black h-full w-[800px] flex-shrink-0 border-2 border-[#e7e7e7] radius-md">
+            A
+          </div>
+          <div className="bg-white p-10 text-black h-full w-[800px] flex-shrink-0 border-2 border-[#e7e7e7] radius-md">
+            A
+          </div>
+          <div className="bg-white p-10 text-black h-full w-[800px] flex-shrink-0 border-2 border-[#e7e7e7] radius-md">
+            A
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gradient-radial from-[#151515] to-[#040404] to-60% px-[200px] grid grid-cols-2 gap-32 py-[160px]">
         <div className="flex flex-col gap-10">
-          <motion.p
+          <motion.h1
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{
@@ -143,10 +175,10 @@ export default function Home() {
               duration: 1,
               ease: "easeInOut",
             }}
-            className="text-white text-9xl font-semibold"
+            className="text-[120px] leading-[1] font-semibold"
           >
             Como podemos te ajudar hoje?
-          </motion.p>
+          </motion.h1>
           <motion.p
             initial={{ x: -200, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -155,14 +187,15 @@ export default function Home() {
               duration: 1,
               ease: "easeInOut",
             }}
-            className="text-zinc-300 text-xl"
+            className="text-p-gray text-xl"
           >
             Nossa equipe está ansiosa para te ajudar a criar um futuro incrível
             de novas possibilidades. Se tiver alguma dúvida, sinta-se livre para
             acessar nossa página de FAQs, basta clicar no botão logo abaixo.
           </motion.p>
-
-          <Button text="Ver FAQs" animate={true} />
+          <Button>
+            <p>Ver FAQs</p>
+          </Button>
         </div>
 
         <form className="flex flex-col gap-y-16">

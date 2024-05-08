@@ -1,7 +1,13 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { ReactElement } from "react";
 
-export default function Button({ text = "", animate = false }) {
+interface ButtonProps {
+  children?: ReactElement;
+  animate?: Boolean;
+}
+
+export default function Button({ children, animate = false }: ButtonProps) {
   const animationProps = animate
     ? {
         initial: { x: -200, opacity: 0 },
@@ -16,11 +22,12 @@ export default function Button({ text = "", animate = false }) {
 
   return (
     <motion.div
-      className="text-white py-2 px-6 rounded-md w-fit bg-main-purple duration-200 cursor-pointer border-2 border-transparent hover:border-main-purple hover:bg-transparent hover:px-8"
+      className="text-white h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-main-purple duration-200 cursor-pointer border-2 border-transparent hover:border-main-purple hover:bg-transparent hover:px-8 group/button
+      "
       {...animationProps}
     >
       <Link key={"#"} href={"#"}>
-        {text}
+        {children}
       </Link>
     </motion.div>
   );

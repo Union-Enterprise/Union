@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-export default function FormInputGroup({ label = "", isTextArea = false, delayTime = 2 }) {
+export default function FormInputGroup({
+  label = "",
+  isTextArea = false,
+  delayTime = 2,
+}) {
   return (
     <motion.div
       initial={{ x: -200, opacity: 0 }}
@@ -19,12 +23,12 @@ export default function FormInputGroup({ label = "", isTextArea = false, delayTi
           id=""
           cols={30}
           rows={10}
-          className="w-full resize-none py-4 bg-transparent border-0 border-transparent border-b-2 border-white outline-none focus:border-main-purple peer opacity-80 focus:opacity-100"
+          className="w-full resize-none py-4 bg-transparent border-0 border-transparent border-b-2 border-white outline-none focus:border-main-purple focus:rounded-md peer opacity-80 focus:opacity-100"
         ></textarea>
       ) : (
         <input
           type="text"
-          className="w-full py-4 bg-transparent border-0 border-transparent border-b-2 border-white outline-none focus:border-main-purple peer opacity-80 focus:opacity-100"
+          className="w-full py-4 bg-transparent border-0 border-transparent border-b-2 border-white outline-none focus:border-main-purple focus:rounded-md peer opacity-80 focus:opacity-100"
           autoComplete="off"
         />
       )}
