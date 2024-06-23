@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        custom: ["var(--font-custom)"],
+      },
       width: {
         lineA: "104.5%",
         lineB: "83.5%",
@@ -28,6 +31,7 @@ const config: Config = {
         "linear-dark-blue": "#050D24",
         "linear-black": "#09090B",
         "main-purple": "#8651FF",
+        "sub-purple": "rgba(134, 81, 255, 0.4)",
         "dark-gray": "#121316",
         "light-gray": "#1C1D22",
         "white-border": "rgba(255 ,255 ,255, 0.2)",

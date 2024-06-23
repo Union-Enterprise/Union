@@ -14,6 +14,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@next/font": "^14.2.4",
     "@tailwindcss/forms": "^0.5.7",
     "animejs": "^3.2.2",
     "framer-motion": "^11.0.20",
@@ -21,7 +22,8 @@
     "lucide-react": "^0.363.0",
     "next": "14.1.3",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-typewriter-effect": "^1.1.0"
   },
   "devDependencies": {
     "@types/animejs": "^3.1.12",

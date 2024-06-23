@@ -35,7 +35,7 @@ export default function CarrousselButtons() {
 
   const scroll =
     (direction: string) => (event: React.MouseEvent<HTMLButtonElement>) => {
-      const container = document.getElementById("partners");
+      const container = document.getElementById("partnersCarroussel");
       if (container) {
         const currentScroll = container.scrollLeft;
         const newScroll =

@@ -79,7 +79,7 @@ function Profile({ animation = 0, name = "undefined", role = 0 }) {
       className={`relative flex flex-col items-center ${profileRotations[animation]} text-center w-[100px]`}
     >
       <div
-        className="rounded-full w-20 h-20 bg-[#202020] border-2 border-transparent hover:border-blue-400 hover:scale-105 hover:cursor-pointer"
+        className="rounded-full w-20 h-20 bg-[#202020] border-2 border-transparent hover:border-main-purple hover:scale-105 hover:cursor-pointer"
         onClick={() => {
           setSocialVisible(!socialVisible);
           setTimeout(() => {
@@ -88,7 +88,7 @@ function Profile({ animation = 0, name = "undefined", role = 0 }) {
         }}
       ></div>
       <p className="font-bold text-xl text-white">{name}</p>
-      <p className="text-p-gray whitespace-nowrap">{roles[role]}</p>
+      <p className="text-p-gray whitespace-nowrap px-2">{roles[role]}</p>
       <div
         className={`absolute bg-[#151515] bottom-[100%] left-[90%] gap-5 p-4 flex justify-between rounded-md z-50  ${
           socialVisible

@@ -9,15 +9,15 @@ import LogoIcon from "./LogoIcon";
 const links = [
   [
     {
-      key: "products-services",
-      href: "../products/",
-      text: "Produtos e Serviços",
+      key: "services",
+      href: "#services",
+      text: "Serviços",
     },
 
-    { key: "partners", href: "../partners/", text: "Parceiros" },
+    { key: "partners", href: "#partners", text: "Parceiros" },
   ],
   [
-    { key: "developers", href: "../developers/", text: "Desenvolvedores" },
+    { key: "developers", href: "#devs", text: "Desenvolvedores" },
     { key: "enterprise", href: "../enterprise/", text: "A Empresa" },
   ],
 ];
