@@ -11,7 +11,6 @@ export default function Topic({
       whileInView={{ opacity: 1, x: 0 }}
       transition={{
         duration: 0.4,
-        delay: 0.2,
         ease: "easeInOut",
       }}
       className="*:text-black flex flex-col gap-5 relative"

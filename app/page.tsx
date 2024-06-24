@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "./ui/components/Button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Card from "./ui/components/Card";
 import FormInputGroup from "./ui/components/FormInputGroup";
 import DevsCircle from "./ui/components/DevsCircle";
@@ -11,14 +11,36 @@ import { faCode, faDesktop, faMobile } from "@fortawesome/free-solid-svg-icons";
 import LogoIcon from "./ui/components/LogoIcon";
 import BlackBoardMessage from "./ui/components/BlackBoardMessage";
 import PartnersCard from "./ui/components/PartnersCard";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import DevsShowcase from "./ui/components/DevsShowcase";
 
 export default function Home() {
   const [showDevs, setShowDevs] = useState(false);
+  const [isExiting, setIsExiting] = useState(false);
+
+  const handleCloseClick = () => {
+    setIsExiting(true);
+    setTimeout(() => {
+      setShowDevs(false);
+      setIsExiting(false);
+    }, 500);
+  };
+
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    if (showDevs) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [showDevs]);
 
   return (
-    <main className="bg-wm-main-background flex h-full flex-col items-center justify-between *:w-full">
+    <main
+      ref={contentRef}
+      className="bg-wm-main-background flex h-full flex-col items-center justify-between *:w-full"
+    >
       <section className="relative h-screen bg-gradient-radial from-[rgba(10,10,10,1)] to-[rgba(4,4,4,1)] justify-center flex flex-col gap-10 items-center">
         <h1 className="font-custom text-8xl text-center font-bold leading-[7rem]">
           Construindo o amanhã <br /> com tecnologia.
@@ -139,7 +161,11 @@ export default function Home() {
           Ver todos &gt;
         </button>
 
-        {showDevs && <DevsShowcase onClose={() => setShowDevs(false)} />}
+        <AnimatePresence>
+          {!isExiting && showDevs && (
+            <DevsShowcase onClose={handleCloseClick} />
+          )}
+        </AnimatePresence>
 
         <DevsCircle />
       </section>
@@ -224,7 +250,11 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="bg-[#040404] from--[] border-t-2 border-[#181818] py-[160px] flex flex-col justify-center items-center gap-10">
+
+      <section className="h-[100vh] bg-gradient-to-b bg-main-purple px-[200px] py-[100px]">
+        <h3 className="text-7xl font-bold">Projeto em destaque</h3>
+      </section>
+      <section className="bg-[#040404] border-t-2 border-[#181818] py-[160px] flex flex-col justify-center items-center gap-10">
         <h2 className="font-semibold text-8xl text-center">
           Pronto para começar <br /> a criar?
         </h2>
@@ -249,7 +279,7 @@ export default function Home() {
           id="partnersCarroussel"
           className="h-full w-full flex gap-5 px-[200px] overflow-x-hidden"
         >
-          <PartnersCard name="Elysium" src="" />
+          <PartnersCard name="Elysium" src="/elysium.png" />
           <PartnersCard name="Target" src="/target.png" />
           <PartnersCard name="Apex" src="/apex.png" />
         </div>

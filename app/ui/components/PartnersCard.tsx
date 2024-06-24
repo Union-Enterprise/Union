@@ -4,9 +4,9 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { url } from "inspector";
 
 export default function PartnersCard({
-  name = "Abrobinha",
+  name = "",
   href = "",
-  src = "/union.svg",
+  src = "",
 }) {
   return (
     <Link

@@ -19,9 +19,9 @@ export default function DevsShowCase({ onClose }: DevsShowcaseProps) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-[rgba(4,4,4,0.8)] w-full h-full fixed flex top-0 left-0 z-50 justify-center items-center flex-col px-[250px] py-[150px] gap-5"
+      className="bg-[rgba(4,4,4,0.8)] w-full h-full fixed flex top-0 left-0 z-50 justify-center items-center flex-col px-[200px] py-[150px] gap-5"
     >
-      <div className="bg-[rgb(15,15,15,0.6)] grid grid-cols-4 w-full gap-10 p-5 h-full rounded-md overflow-auto">
+      <div className="bg-[rgb(15,15,15,0.6)] grid grid-cols-5 w-full gap-5 p-5 h-[600px] rounded-md overflow-auto">
         <Card name="Antônio Augusto" roles="Tester / Analista" />
         <Card name="Bruno Oliveira" roles="Back-End / DBA" />
         <Card name="Caio Silva" roles="Front-End / Designer" />
@@ -45,7 +45,7 @@ export default function DevsShowCase({ onClose }: DevsShowcaseProps) {
 
 function Card({ name = "", roles = "" }) {
   return (
-    <div className="bg-[#151515] rounded-md w-full h-[250px] flex flex-col gap-10 p-10 border-[1px] border-transparent hover:border-main-purple group col-span-2">
+    <div className="bg-[#151515] rounded-md w-full h-full flex flex-col gap-10 p-10 border-[1px] border-transparent hover:border-main-purple group">
       {/* <Image src="/union.svg" width={50} height={50} alt="Dev 1" /> */}
       <div>
         <p className="text-3xl">{name}</p>
