@@ -13,6 +13,8 @@ import BlackBoardMessage from "./ui/components/BlackBoardMessage";
 import PartnersCard from "./ui/components/PartnersCard";
 import { useState, useEffect, useRef } from "react";
 import DevsShowcase from "./ui/components/DevsShowcase";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const [showDevs, setShowDevs] = useState(false);
@@ -251,8 +253,37 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="h-[100vh] bg-gradient-to-b bg-main-purple px-[200px] py-[100px]">
-        <h3 className="text-7xl font-bold">Projeto em destaque</h3>
+      <section className="h-[100vh] bg-gradient-to-b bg-white px-[200px] py-[100px] flex flex-col gap-20">
+        <h3 className="text-7xl font-bold text-main-purple">Nosso projeto</h3>
+        <div className="grid grid-cols-2 items-center justify-center bg-main-purple rounded-md p-20 gap-[120px]">
+          <Image
+      src={'/mockup-iacademy.png'}
+      width={1000}
+      height={1200}
+      alt="Picture of the author"
+      className="rounded-xl"
+    />
+    <div className="flex flex-col gap-10 *:text-right items-end">
+      <Image
+      src={'/iacademy.svg'}
+      width={350}
+      height={150}
+      alt="Picture of the author"
+      className="rounded-xl"
+    />
+      <p className="max-w[80%] text-xl">O IAcademy é o principal projeto da Union. Consiste em uma plataforma de ensino gameficada, voltada para o público estudantil que deseja se preparar para vestibulares como o Enem. Mas o seu diferencial está na utilização de Inteligência Artificial para auxiliar os estudantes durante suas jornadas de estudos.</p>
+      <p className="text-2xl">Gostou da ideia?</p>
+      <div
+      className="text-main-purple h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-white duration-200 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white hover:px-8 group/button hover:font-semibold
+      "
+    >
+      <Link key={"#"} href={"#"}>
+      <p>Conheça o projeto</p>
+      </Link>
+    </div>
+    </div>
+
+        </div>
       </section>
       <section className="bg-[#040404] border-t-2 border-[#181818] py-[160px] flex flex-col justify-center items-center gap-10">
         <h2 className="font-semibold text-8xl text-center">

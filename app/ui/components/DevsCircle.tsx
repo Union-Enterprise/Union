@@ -49,7 +49,7 @@ function CircleRings({ scale = "" }) {
   );
 }
 
-function Profile({ animation = 0, name = "undefined", role = 0 }) {
+function Profile({ animation = 0, name = "undefined", role = 0, devImg = 0 }) {
   const [socialVisible, setSocialVisible] = useState(false);
 
   const profileRotations = [
@@ -74,12 +74,26 @@ function Profile({ animation = 0, name = "undefined", role = 0 }) {
     "Gerente",
   ];
 
+  const profilesImg = [
+    "/devs/antonio.png",
+    "/devs/bruno.png",
+    "/devs/caio.png",
+    "/devs/eduardo.png",
+    "/devs/kaua.png",
+    "/devs/kauane.png",
+    "/devs/mauricio.png",
+    "/devs/rafaella.png",
+    "/devs/victor.png",
+    "/devs/vitor.png",
+  ]
+
   return (
     <div
       className={`relative flex flex-col items-center ${profileRotations[animation]} text-center w-[100px]`}
     >
       <div
-        className="rounded-full w-20 h-20 bg-[#202020] border-2 border-transparent hover:border-main-purple hover:scale-105 hover:cursor-pointer"
+      style={{ backgroundImage: `url(${profilesImg[devImg]})`}}
+        className="rounded-full w-20 h-20 bg-center bg- bg-cover bg-no-repeat border-2 border-transparent bg-black hover:border-main-purple hover:scale-105 hover:cursor-pointer"
         onClick={() => {
           setSocialVisible(!socialVisible);
           setTimeout(() => {
@@ -122,46 +136,46 @@ export default function DevsCircle() {
       <div className="w-[1500px] h-[1500px] absolute top-[50%]">
         <div className="position absolute left-0 top-0 bottom-0 right-0 flex justify-center items-center">
           <Line animation={1}>
-            <Profile animation={1} name="Eduardo" role={1} />
-            <Profile animation={1} name="Eduardo" role={1} />
+            <Profile animation={1} name="Eduardo" role={1} devImg={3} />
+            <Profile animation={1} name="Eduardo" role={1} devImg={3} />
           </Line>
           <Line animation={3}>
-            <Profile animation={3} name="Kauã" role={2} />
-            <Profile animation={3} name="Kauã" role={2} />
+            <Profile animation={3} name="Kauã" role={2} devImg={4} />
+            <Profile animation={3} name="Kauã" role={2} devImg={4} />
           </Line>
           <Line animation={6}>
-            <Profile animation={6} name="Rafaella" role={3} />
-            <Profile animation={6} name="Rafaella" role={3} />
+            <Profile animation={6} name="Rafaella" role={3} devImg={7} />
+            <Profile animation={6} name="Rafaella" role={3}  devImg={7} />
           </Line>
           <Line animation={9}>
-            <Profile animation={9} name="Caio" />
-            <Profile animation={9} name="Caio" />
+            <Profile animation={9} name="Caio" devImg={2} />
+            <Profile animation={9} name="Caio" devImg={2} />
           </Line>
 
           <Line width={1}>
-            <Profile name="Kauane" role={5} />
-            <Profile name="Kauane" role={5} />
+            <Profile name="Kauane" role={5} devImg={5} />
+            <Profile name="Kauane" role={5} devImg={5} />
           </Line>
           <Line animation={4} width={1}>
-            <Profile animation={4} name="Maurício" role={3} />
-            <Profile animation={4} name="Maurício" role={3} />
+            <Profile animation={4} name="Maurício" role={3} devImg={6} />
+            <Profile animation={4} name="Maurício" role={3} devImg={6} />
           </Line>
           <Line animation={7} width={1}>
-            <Profile animation={7} name="Vitor" role={4} />
-            <Profile animation={7} name="Vitor" role={4} />
+            <Profile animation={7} name="Vitor" role={4} devImg={9} />
+            <Profile animation={7} name="Vitor" role={4}  devImg={9} />
           </Line>
 
           <Line animation={2} width={2}>
-            <Profile animation={2} name="Victor" />
-            <Profile animation={2} name="Victor" />
+            <Profile animation={2} name="Victor" devImg={8} />
+            <Profile animation={2} name="Victor" devImg={8} />
           </Line>
           <Line animation={5} width={2}>
             <Profile animation={5} name="Antônio" role={4} />
             <Profile animation={5} name="Antônio" role={4} />
           </Line>
           <Line animation={8} width={2}>
-            <Profile animation={8} name="Bruno" role={1} />
-            <Profile animation={8} name="Bruno" role={1} />
+            <Profile animation={8} name="Bruno" role={1} devImg={1} />
+            <Profile animation={8} name="Bruno" role={1} devImg={1} />
           </Line>
         </div>
 
