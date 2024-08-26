@@ -43,7 +43,7 @@ export default function Home() {
       ref={contentRef}
       className="bg-wm-main-background flex h-full flex-col items-center justify-between *:w-full"
     >
-      <section className="relative h-screen bg-gradient-radial from-[rgba(10,10,10,1)] to-[rgba(4,4,4,1)] justify-center flex flex-col gap-10 items-center">
+      <section className="relative h-screen bg-[#040404] bg-gradient-to-b from-[#040404] to-90%  to-[rgba(117,63,243,0.3)]  justify-center flex flex-col gap-10 items-center">
         <h1 className="font-custom text-8xl text-center font-bold leading-[7rem]">
           Construindo o amanhã <br /> com tecnologia.
         </h1>
@@ -172,11 +172,7 @@ export default function Home() {
         <DevsCircle />
       </section>
       <section className="bg-[#040404] bg-gradient-to-b from-[#040404] from-50% to-[rgba(134,81,255,0.1)] h-[275vh] py-[160px] px-[200px] flex justify-center relative">
-        <div className="absolute top-0 left-0 w-full h-full pt-[160px] pb-[250px]">
-          <h2 className="text-6xl font-bold text-black bg-white p-8 h-fit flex items-end w-fit mx-auto rounded-md sticky top-[45%] hover:bg-main-purple hover:text-white group/union duration-200 cursor-pointer z-40">
-            <LogoIcon width={180} height={50} minY={75} />, conectando o mundo
-          </h2>
-        </div>
+        
         <div className="mx-[20px] my-[160px] relative w-full font-semibold">
           <BlackBoardMessage
             message="Unindo pessoas à ideias"
@@ -285,7 +281,7 @@ export default function Home() {
 
         </div>
       </section>
-      <section className="bg-[#040404] border-t-2 border-[#181818] py-[160px] flex flex-col justify-center items-center gap-10">
+      <section className=" bg-[#040404] bg-gradient-to-b from-[#040404] to-90%  to-[rgba(117,63,243,0.3)] py-[160px] flex flex-col justify-center items-center gap-10">
         <h2 className="font-semibold text-8xl text-center">
           Pronto para começar <br /> a criar?
         </h2>
@@ -298,7 +294,7 @@ export default function Home() {
       </section>
       <section
         id="partners"
-        className="bg-[#f0f0f0] border-t-2 border-[#181818] py-[160px] h-[100vh] flex flex-col gap-10 relative"
+        className="bg-[#f0f0f0]  py-[160px] h-[100vh] flex flex-col gap-10 relative"
       >
         <div className="flex justify-between items-end mx-[200px]">
           <h2 className="text-7xl text-black font-semibold">
