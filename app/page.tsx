@@ -15,6 +15,9 @@ import { useState, useEffect, useRef } from "react";
 import DevsShowcase from "./ui/components/DevsShowcase";
 import Image from "next/image";
 import Link from "next/link";
+import AnimatedText from "./ui/components/AnimatedText";
+import BorderGradient from "./ui/components/BorderGradient";
+import GenericCard from "./ui/components/GenericCard";
 
 export default function Home() {
   const [showDevs, setShowDevs] = useState(false);
@@ -43,10 +46,12 @@ export default function Home() {
       ref={contentRef}
       className="bg-wm-main-background flex h-full flex-col items-center justify-between *:w-full"
     >
-      <section className="relative h-screen bg-[#040404] bg-gradient-to-b from-[#040404] to-90%  to-[rgba(117,63,243,0.3)]  justify-center flex flex-col gap-10 items-center">
-        <h1 className="font-custom text-8xl text-center font-bold leading-[7rem]">
-          Construindo o amanhã <br /> com tecnologia.
-        </h1>
+      <section className="h-screen bg-[#0A0A0A] justify-center flex flex-col gap-10 items-center relative">
+        <BorderGradient />
+        <AnimatedText
+          text="Construindo o amanhã com tecnologia."
+          classname="text-7xl inline whitespace-normal w-[60vw] break-words text-center font-bold"
+        />
         <p className="text-p-gray max-w-[50%] text-2xl text-center">
           Desenvolvemos soluções inovadoras que resolvem problemas reais e
           melhoram a qualidade de vida. Juntos, moldando um amanhã mais justo e
@@ -59,7 +64,7 @@ export default function Home() {
         </Button>
       </section>
 
-      <section className="flex flex-col gap-48 py-[160px]">
+      <section className="flex flex-col gap-10 py-[160px]">
         <div className="flex flex-col gap-6 max-w-[50%] pl-[200px]">
           <h2 className="text-7xl text-p-black font-semibold">
             Por que desenvolver com a Union?
@@ -69,38 +74,30 @@ export default function Home() {
             impulsionem os seus objetivos e te levem ao próximo nível.
           </p>
         </div>
-
-        <div className=" grid grid-cols-2 gap-[100px] pr-[200px] h-[1750px]">
-          <div className="">
-            <div className="bg-[url('/seila.avif')] bg-cover bg-center bg-no-repeat h-[800px] sticky top-[115px]"></div>
-          </div>
-          <div className="flex flex-col justify-between my-[350px]">
-            <Topic
-              title="Facilidade"
-              description="Na Union, simplificamos todo o processo de desenvolvimento, desde a concepção até a implementação. Nossa equipe experiente cuida de todos os detalhes técnicos, permitindo que você se concentre no que realmente importa, o seu negócio."
-            />
-            <Topic
-              title="Soluções Personalizadas"
-              description="Entendemos que cada negócio é único. Por isso, criamos soluções sob medida que atendem às suas necessidades específicas, garantindo que você obtenha exatamente o que precisa para alcançar seus objetivos."
-            />
-          </div>
-        </div>
-        <div className=" grid grid-cols-2 gap-[100px] h-[1750px] pl-[200px]">
-          <div className="flex flex-col justify-between my-[350px]">
-            <Topic
-              initialX={-500}
-              title="Suporte Contínuo"
-              description="Nosso compromisso não termina com a entrega do projeto. Oferecemos suporte técnico contínuo para assegurar que seus sistemas funcionem perfeitamente e estejam sempre atualizados, proporcionando tranquilidade e confiabilidade."
-            />
-            <Topic
-              initialX={-500}
-              title="On-line em instantes"
-              description="Com nossa metodologia ágil e eficiente, garantimos que seus projetos sejam lançados no menor tempo possível, sem comprometer a qualidade. Assim, você pode começar a colher os benefícios da sua presença digital rapidamente."
-            />
-          </div>
-          <div className="">
-            <div className="bg-[url('/online.jpg')] bg-cover bg-center bg-no-repeat h-[800px] sticky top-[115px]"></div>
-          </div>
+        <div className="grid grid-cols-4 gap-10 px-[200px]">
+          <GenericCard
+            cols="col-span-2"
+            title="Transforme sua Ideia em Realidade"
+            text="A Union é especialista em transformar suas ideias em soluções tecnológicas eficazes. Com um time dedicado de desenvolvedores e designers, garantimos que seu projeto seja entregue com qualidade, no prazo e dentro do orçamento. Vamos juntos transformar sua visão em uma realidade que vai além das suas expectativas."
+          />
+          <GenericCard
+            cols="col-span-2"
+            delay={0.6}
+            title="Soluções Personalizadas para Seu Negócio"
+            text="Entendemos que cada empresa é única e, por isso, oferecemos soluções de software personalizadas para atender às suas necessidades específicas. A Union trabalha lado a lado com você para criar soluções que realmente funcionem para seu negócio, ajudando a otimizar processos e alcançar seus objetivos."
+          />
+          <GenericCard
+            cols="col-span-2"
+            delay={1.2}
+            title="Tecnologia de Ponta ao Seu Alcance Texto"
+            text="Com a Union, pequenas e médias empresas têm acesso a tecnologia de ponta que antes era exclusiva para grandes corporações. Utilizamos as melhores práticas e ferramentas para garantir que seu software seja moderno, seguro e escalável, impulsionando sua empresa para o futuro."
+          />
+          <GenericCard
+            cols="col-span-2"
+            delay={1.8}
+            title="Apoio Contínuo e Suporte Dedicado"
+            text="Nosso compromisso não termina com a entrega do projeto. A Union oferece suporte contínuo e manutenção para garantir que seu software continue funcionando perfeitamente. Estamos aqui para resolver qualquer problema e fazer ajustes sempre que necessário, para que você possa focar no crescimento do seu negócio."
+          />
         </div>
       </section>
 
@@ -172,7 +169,6 @@ export default function Home() {
         <DevsCircle />
       </section>
       <section className="bg-[#040404] bg-gradient-to-b from-[#040404] from-50% to-[rgba(134,81,255,0.1)] h-[275vh] py-[160px] px-[200px] flex justify-center relative">
-        
         <div className="mx-[20px] my-[160px] relative w-full font-semibold">
           <BlackBoardMessage
             message="Unindo pessoas à ideias"
@@ -253,32 +249,37 @@ export default function Home() {
         <h3 className="text-7xl font-bold text-main-purple">Nosso projeto</h3>
         <div className="grid grid-cols-2 items-center justify-center bg-main-purple rounded-md p-20 gap-[120px]">
           <Image
-      src={'/mockup-iacademy.png'}
-      width={1000}
-      height={1200}
-      alt="Picture of the author"
-      className="rounded-xl"
-    />
-    <div className="flex flex-col gap-10 *:text-right items-end">
-      <Image
-      src={'/iacademy.svg'}
-      width={350}
-      height={150}
-      alt="Picture of the author"
-      className="rounded-xl"
-    />
-      <p className="max-w[80%] text-xl">O IAcademy é o principal projeto da Union. Consiste em uma plataforma de ensino gameficada, voltada para o público estudantil que deseja se preparar para vestibulares como o Enem. Mas o seu diferencial está na utilização de Inteligência Artificial para auxiliar os estudantes durante suas jornadas de estudos.</p>
-      <p className="text-2xl">Gostou da ideia?</p>
-      <div
-      className="text-main-purple h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-white duration-200 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white hover:px-8 group/button hover:font-semibold
+            src={"/mockup-iacademy.png"}
+            width={1000}
+            height={1200}
+            alt="Picture of the author"
+            className="rounded-xl"
+          />
+          <div className="flex flex-col gap-10 *:text-right items-end">
+            <Image
+              src={"/iacademy.svg"}
+              width={350}
+              height={150}
+              alt="Picture of the author"
+              className="rounded-xl"
+            />
+            <p className="max-w[80%] text-xl">
+              O IAcademy é o principal projeto da Union. Consiste em uma
+              plataforma de ensino gameficada, voltada para o público estudantil
+              que deseja se preparar para vestibulares como o Enem. Mas o seu
+              diferencial está na utilização de Inteligência Artificial para
+              auxiliar os estudantes durante suas jornadas de estudos.
+            </p>
+            <p className="text-2xl">Gostou da ideia?</p>
+            <div
+              className="text-main-purple h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-white duration-200 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white hover:px-8 group/button hover:font-semibold
       "
-    >
-      <Link key={"#"} href={"#"}>
-      <p>Conheça o projeto</p>
-      </Link>
-    </div>
-    </div>
-
+            >
+              <Link key={"#"} href={"#"}>
+                <p>Conheça o projeto</p>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
       <section className=" bg-[#040404] bg-gradient-to-b from-[#040404] to-90%  to-[rgba(117,63,243,0.3)] py-[160px] flex flex-col justify-center items-center gap-10">
@@ -312,7 +313,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gradient-radial from-[#151515] to-[#040404] to-60% px-[200px] grid grid-cols-2 gap-32 py-[160px]">
+      <section
+        id="contact"
+        className="bg-gradient-radial from-[#151515] to-[#040404] to-60% px-[200px] grid grid-cols-2 gap-32 py-[160px] relative"
+      >
+        <BorderGradient />
         <div className="flex flex-col gap-10">
           <motion.h1
             initial={{ x: -200, opacity: 0 }}
@@ -353,19 +358,12 @@ export default function Home() {
           <FormInputGroup label="E-mail da empresa" delayTime={3} />
           <FormInputGroup label="Assunto" delayTime={3.5} />
           <FormInputGroup label="Mensagem" isTextArea={true} delayTime={4} />
-          <motion.button
-            initial={{ x: -200, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{
-              delay: 4.5,
-              duration: 1,
-              ease: "easeInOut",
-            }}
+          <button
             type="submit"
             className="py-3 bg-main-purple border-2 border-transparent rounded-md hover:border-main-purple hover:bg-transparent"
           >
             Enviar
-          </motion.button>
+          </button>
         </form>
       </section>
     </main>

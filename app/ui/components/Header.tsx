@@ -7,19 +7,14 @@ import Button from "./Button";
 import LogoIcon from "./LogoIcon";
 
 const links = [
-  [
-    {
-      key: "services",
-      href: "#services",
-      text: "Serviços",
-    },
-
-    { key: "partners", href: "#partners", text: "Parceiros" },
-  ],
-  [
-    { key: "developers", href: "#devs", text: "Desenvolvedores" },
-    { key: "enterprise", href: "../enterprise/", text: "A Empresa" },
-  ],
+  {
+    key: "services",
+    href: "#services",
+    text: "Serviços",
+  },
+  { key: "developers", href: "#devs", text: "Desenvolvedores" },
+  { key: "partners", href: "#partners", text: "Parceiros" },
+  { key: "contact", href: "#contact", text: "Fale Conosco" },
 ];
 
 export default function Header() {
@@ -43,7 +38,6 @@ export default function Header() {
         }  w-full flex justify-between items-center px-[100px] h-[80px] fixed top-0 z-[999]`}
       >
         <div className="flex gap-10 items-center">
-          <div className={`${"bg-[rgba(0,0,0,0.4)] "}`}></div>
           <Link
             key={"home"}
             href={"/"}
@@ -51,31 +45,20 @@ export default function Header() {
           >
             <LogoIcon />
           </Link>
-          <div className="flex gap-10">
-            {links[0].map((link) => (
-              <Link
-                key={link.key}
-                href={link.href}
-                className="text-white hover:text-main-purple duration-100"
-              >
-                <p>{link.text}</p>
-              </Link>
-            ))}
-          </div>
         </div>
         <div className="flex gap-10 items-center">
-          {links[1].map((link) => (
+          {links.map((link) => (
             <Link
               key={link.key}
               href={link.href}
-              className="text-white hover:text-main-purple duration-100"
+              className="hover:text-main-purple duration-100"
+              // className={`${
+              //   isScrolled ? "text-black" : "text-white"
+              // } hover:text-main-purple duration-100`}
             >
               <p>{link.text}</p>
             </Link>
           ))}
-          <Button>
-            <p>Conhecer</p>
-          </Button>
         </div>
       </header>
     </>

@@ -5,10 +5,11 @@ import Link from "next/link";
 import FooterSection from "./FooterSection";
 import LogoIcon from "./LogoIcon";
 import Button from "./Button";
+import BorderGradient from "./BorderGradient";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#040404] border-t-2 border-[#111111] w-full px-[200px] py-[80px]">
+    <footer className=" bg-[#151515] w-full px-[200px] py-[80px] relative">
       <div className="grid grid-cols-4 gap-10">
         <div className="flex flex-col gap-5">
           <Link

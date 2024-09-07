@@ -4,8 +4,6 @@ import "./globals.css";
 import Header from "./ui/components/Header";
 import Footer from "./ui/components/Footer";
 
-import localFont from "@next/font/local";
-
 const figtree = Figtree({ subsets: ["latin"] });
 
 // const gtWalsheim = localFont({
@@ -24,7 +22,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      {/* <body className={`${figtree.className} ${gtWalsheim.variable}`}> */}
       <body className={`${figtree.className}`}>
         <Header />
         {children}
