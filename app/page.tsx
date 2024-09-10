@@ -44,13 +44,13 @@ export default function Home() {
   return (
     <main
       ref={contentRef}
-      className="bg-wm-main-background flex h-full flex-col items-center justify-between *:w-full"
+      className="bg-white flex h-full flex-col items-center justify-between *:w-full"
     >
       <section className="h-screen bg-white justify-center flex flex-col gap-10 items-center relative">
-        <BorderGradient />
+        {/* <BorderGradient /> */}
         <AnimatedText
           text="Construindo o amanhã com tecnologia."
-          classname="text-7xl text-black inline whitespace-normal w-[60vw] break-words text-center font-bold"
+          classname="text-8xl text-black inline whitespace-normal w-[60vw] break-words text-center font-bold"
         />
         <p className="text-p-gray max-w-[50%] text-2xl text-center">
           Desenvolvemos soluções inovadoras que resolvem problemas reais e
@@ -269,7 +269,7 @@ export default function Home() {
               className="text-main-purple h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-white duration-200 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white hover:px-8 group/button hover:font-semibold
       "
             >
-              <Link key={"#"} href={"#"}>
+              <Link key={"http://localhost:3001/"} href={"http://localhost:3001/"}>
                 <p>Conheça o projeto</p>
               </Link>
             </div>
@@ -289,7 +289,7 @@ export default function Home() {
       </section>
       <section
         id="partners"
-        className="bg-[#f0f0f0]  py-[160px] h-[100vh] flex flex-col gap-10 relative"
+        className="bg-white  py-[160px] h-[100vh] flex flex-col gap-10 relative"
       >
         <div className="flex justify-between items-end mx-[200px]">
           <h2 className="text-7xl text-black font-semibold">

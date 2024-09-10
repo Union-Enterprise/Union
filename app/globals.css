@@ -27,7 +27,7 @@ label[for="customCheckbox"]::before {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --check-purple: rgb(134, 81, 255);
+  --check-purple: rgb(24, 101, 242);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,7 +67,7 @@ body {
     rgba(0, 153, 255, 0) 36%,
     rgba(0, 153, 255, 0) 63%,
     rgba(0, 128, 255, 0.25) 83%,
-    rgb(0, 51, 255) 100%
+    rgb(24, 101, 242) 100%
   );
   bottom: 0;
   flex: none;
@@ -137,7 +137,7 @@ body {
   background: linear-gradient(
     180deg,
     rgba(0, 85, 255, 0) 0%,
-    rgba(8, 0, 255, 0.7) 100%
+    rgba(24, 101, 242, 0.7) 100%
   );
   flex: none;
   inset: 208px 0 0;
