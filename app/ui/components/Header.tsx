@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Button from "./Button";
 import LogoIcon from "./LogoIcon";
+import BlackIcon from "./BlackIcon";
 
 const links = [
   {
@@ -34,8 +35,8 @@ export default function Header() {
         className={`${
           isScrolled
             ? "bg-[rgba(0,0,0,0.4)] backdrop-saturate-[1.8] backdrop-blur-xl"
-            : "bg-transparent opacity-100"
-        }  w-full flex justify-between items-center px-[100px] h-[80px] fixed top-0 z-[999]`}
+            : "*:text-black opacity-100"
+        }  w-full flex justify-between items-center px-[100px] h-[80px] fixed top-0 z-40 duration-100`}
       >
         <div className="flex gap-10 items-center">
           <Link
@@ -43,7 +44,7 @@ export default function Header() {
             href={"/"}
             className="flex gap-5 group cursor-pointer"
           >
-            <LogoIcon />
+            {isScrolled ? <LogoIcon /> : <BlackIcon />}
           </Link>
         </div>
         <div className="flex gap-10 items-center">

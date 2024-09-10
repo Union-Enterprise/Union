@@ -22,7 +22,7 @@ export default function Button({ children, animate = false }: ButtonProps) {
 
   return (
     <motion.div
-      className="text-white h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-main-purple duration-200 cursor-pointer border-2 border-transparent hover:border-main-purple hover:bg-transparent hover:px-8 group/button
+      className="text-white h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-main-purple duration-200 cursor-pointer border-2 border-transparent hover:border-main-purple hover:text-black hover:bg-transparent hover:px-8 group/button
       "
       {...animationProps}
     >

@@ -46,11 +46,11 @@ export default function Home() {
       ref={contentRef}
       className="bg-wm-main-background flex h-full flex-col items-center justify-between *:w-full"
     >
-      <section className="h-screen bg-[#0A0A0A] justify-center flex flex-col gap-10 items-center relative">
+      <section className="h-screen bg-white justify-center flex flex-col gap-10 items-center relative">
         <BorderGradient />
         <AnimatedText
           text="Construindo o amanhã com tecnologia."
-          classname="text-7xl inline whitespace-normal w-[60vw] break-words text-center font-bold"
+          classname="text-7xl text-black inline whitespace-normal w-[60vw] break-words text-center font-bold"
         />
         <p className="text-p-gray max-w-[50%] text-2xl text-center">
           Desenvolvemos soluções inovadoras que resolvem problemas reais e
@@ -82,20 +82,19 @@ export default function Home() {
           />
           <GenericCard
             cols="col-span-2"
-            delay={0.6}
             title="Soluções Personalizadas para Seu Negócio"
+            delay={0.4}
             text="Entendemos que cada empresa é única e, por isso, oferecemos soluções de software personalizadas para atender às suas necessidades específicas. A Union trabalha lado a lado com você para criar soluções que realmente funcionem para seu negócio, ajudando a otimizar processos e alcançar seus objetivos."
           />
           <GenericCard
             cols="col-span-2"
-            delay={1.2}
             title="Tecnologia de Ponta ao Seu Alcance Texto"
             text="Com a Union, pequenas e médias empresas têm acesso a tecnologia de ponta que antes era exclusiva para grandes corporações. Utilizamos as melhores práticas e ferramentas para garantir que seu software seja moderno, seguro e escalável, impulsionando sua empresa para o futuro."
           />
           <GenericCard
             cols="col-span-2"
-            delay={1.8}
             title="Apoio Contínuo e Suporte Dedicado"
+            delay={0.4}
             text="Nosso compromisso não termina com a entrega do projeto. A Union oferece suporte contínuo e manutenção para garantir que seu software continue funcionando perfeitamente. Estamos aqui para resolver qualquer problema e fazer ajustes sempre que necessário, para que você possa focar no crescimento do seu negócio."
           />
         </div>
@@ -168,8 +167,8 @@ export default function Home() {
 
         <DevsCircle />
       </section>
-      <section className="bg-[#040404] bg-gradient-to-b from-[#040404] from-50% to-[rgba(134,81,255,0.1)] h-[275vh] py-[160px] px-[200px] flex justify-center relative">
-        <div className="mx-[20px] my-[160px] relative w-full font-semibold">
+      <section className="bg-[#040404] bg-gradient-to-b from-[#040404] from-50% to-[rgba(134,81,255,0.1)] h-[320vh] py-[160px] px-[200px] flex justify-center relative">
+        <div className="my-[20px] relative w-full font-semibold">
           <BlackBoardMessage
             message="Unindo pessoas à ideias"
             size="text-9xl"
@@ -191,7 +190,7 @@ export default function Home() {
           />
           <BlackBoardMessage
             message="Construindo o amanhã, hoje"
-            size="text-[100px]"
+            size="text-[60px]"
             x={80}
             y={480}
           />
@@ -212,15 +211,16 @@ export default function Home() {
           <BlackBoardMessage
             message="Iniciativas que Inspiram"
             y={1100}
-            size="text-9xl"
+            size="text-7xl"
             weight="font-black"
           />
           <BlackBoardMessage
             message="Facilitando objetivos com Criatividade"
+            x={300}
             y={1300}
             size="text-9xl"
             weight="font-normal"
-            align="text-center"
+            align="text-right"
           />
           <BlackBoardMessage
             message="Impulsionando Ideias"
@@ -229,23 +229,17 @@ export default function Home() {
             weight="font-black"
           />
           <BlackBoardMessage
-            message="Desenvolvendo sonhos"
+            message="Desenvolvendo sonhos, conectando o mundo"
             x={100}
-            y={1700}
-            size="text-7xl"
-            weight="font-normal"
-          />
-          <BlackBoardMessage
-            message="Tecnologia a serviço da sociedade"
-            x={200}
             y={1800}
             size="text-7xl"
-            weight="font-thin"
+            weight="font-semibold"
+            align="text-center"
           />
         </div>
       </section>
 
-      <section className="h-[100vh] bg-gradient-to-b bg-white px-[200px] py-[100px] flex flex-col gap-20">
+      <section className=" bg-gradient-to-b bg-white px-[200px] py-[100px] flex flex-col gap-20">
         <h3 className="text-7xl font-bold text-main-purple">Nosso projeto</h3>
         <div className="grid grid-cols-2 items-center justify-center bg-main-purple rounded-md p-20 gap-[120px]">
           <Image

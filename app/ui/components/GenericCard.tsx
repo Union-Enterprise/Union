@@ -14,11 +14,13 @@ const GenericCard: React.FC<{
   return (
     <motion.div
       className={`${cols} shadow-sm hover:shadow-lg *:text-black border-2 rounded-lg p-10`}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
-      variants={cardVariants}
-      transition={{ delay: delay, duration: 1, ease: "easeOut" }}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.4,
+        delay: delay,
+        ease: "easeInOut",
+      }}
     >
       <h3 className="text-2xl text-white font-semibold mb-4">{title}</h3>
       <p className="text-lg text-white">{text}</p>

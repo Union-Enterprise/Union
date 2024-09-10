@@ -23,7 +23,7 @@ const profilesImg = [
   "/devs/rafaella.png",
   "/devs/victor.png",
   "/devs/vitor.png",
-]
+];
 
 export default function DevsShowCase({ onClose }: DevsShowcaseProps) {
   return (
@@ -32,9 +32,9 @@ export default function DevsShowCase({ onClose }: DevsShowcaseProps) {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-[rgba(4,4,4,0.8)] w-full h-full fixed flex top-0 left-0 z-50 justify-center items-center flex-col px-[200px] py-[150px] gap-5"
+      className="bg-[rgba(4,4,4,0.8)] w-full h-full fixed flex top-0 left-0 z-50 justify-center items-center flex-col py-5 gap-5"
     >
-      <div className="bg-[rgb(15,15,15,0.6)] grid grid-cols-5 w-full gap-5 p-5 h-[600px] rounded-md overflow-auto">
+      <div className="bg-[rgb(15,15,15,0.6)] grid grid-cols-5 w-full gap-5 p-5 rounded-md overflow-auto">
         <Card name="Antônio Augusto" roles="Tester / Analista" devImg={0} />
         <Card name="Bruno Silva" roles="Back-End / DBA" devImg={1} />
         <Card name="Caio Silva" roles="Front-End / Designer" devImg={2} />
@@ -82,12 +82,12 @@ function Card({ name = "", roles = "", devImg = 0 }) {
         />
       </div>
       <Image
-      src={`${profilesImg[devImg]}`}
-      className="absolute right-7 bottom-7 z-50"
-      width={45}
-      height={45}
-      alt="Picture of the author"
-    />
+        src={`${profilesImg[devImg]}`}
+        className="absolute right-7 bottom-7 z-50"
+        width={45}
+        height={45}
+        alt="Picture of the author"
+      />
     </div>
   );
 }
