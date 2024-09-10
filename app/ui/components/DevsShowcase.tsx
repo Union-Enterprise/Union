@@ -58,8 +58,7 @@ export default function DevsShowCase({ onClose }: DevsShowcaseProps) {
 
 function Card({ name = "", roles = "", devImg = 0 }) {
   return (
-    <div className="bg-[#151515] rounded-md w-full h-full flex flex-col gap-10 p-7 border-[1px] border-transparent hover:border-main-purple group relative">
-      {/* <Image src="/union.svg" width={50} height={50} alt="Dev 1" /> */}
+    <div className="bg-[#151515] rounded-md w-full h-full flex flex-col gap-10 p-7 border-[1px] border-transparent hover:border-main-purple group relative justify-between">
       <div>
         <p className="text-3xl">{name}</p>
         <p className="text-p-gray text-xl">{roles}</p>
