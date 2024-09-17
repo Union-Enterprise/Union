@@ -14,6 +14,7 @@ const links = [
     text: "Serviços",
   },
   { key: "developers", href: "#devs", text: "Desenvolvedores" },
+  { key: "iacademy", href: "#iacademy", text: "Projeto" },
   { key: "partners", href: "#partners", text: "Parceiros" },
   { key: "contact", href: "#contact", text: "Fale Conosco" },
 ];
@@ -41,7 +42,7 @@ export default function Header() {
         <div className="flex gap-10 items-center">
           <Link
             key={"home"}
-            href={"/"}
+            href={"#home"}
             className="flex gap-5 group cursor-pointer"
           >
             {isScrolled ? <LogoIcon /> : <BlackIcon />}

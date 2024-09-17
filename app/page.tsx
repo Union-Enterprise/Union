@@ -43,6 +43,7 @@ export default function Home() {
 
   return (
     <main
+    id="home"
       ref={contentRef}
       className="bg-white flex h-full flex-col items-center justify-between *:w-full"
     >
@@ -102,10 +103,10 @@ export default function Home() {
 
       <section
         id="services"
-        className="flex flex-col gap-5 pb-[160px] px-[200px]"
+        className="flex flex-col gap-5 pt-[180px] pb-[160px] px-[200px]"
       >
         <div className="flex flex-col gap-20">
-          <div className="flex flex-col gap-5 max-w-[55%]">
+          <div className="flex flex-col gap-5 max-w-[65%]">
             <h2 className="text-7xl text-black font-semibold">
               Tudo que você precisa em um só lugar
             </h2>
@@ -239,7 +240,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" bg-gradient-to-b bg-white px-[200px] py-[100px] flex flex-col gap-20">
+      <section id="iacademy" className=" bg-gradient-to-b bg-white px-[200px] py-[100px] flex flex-col gap-20">
         <h3 className="text-7xl font-bold text-main-purple">Nosso projeto</h3>
         <div className="grid grid-cols-2 items-center justify-center bg-main-purple rounded-md p-20 gap-[120px]">
           <Image
@@ -269,7 +270,10 @@ export default function Home() {
               className="text-main-purple h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-white duration-200 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white hover:px-8 group/button hover:font-semibold
       "
             >
-              <Link key={"http://localhost:3001/"} href={"http://localhost:3001/"}>
+              <Link
+                key={"http://localhost:3001/"}
+                href={"http://localhost:3001/"}
+              >
                 <p>Conheça o projeto</p>
               </Link>
             </div>
