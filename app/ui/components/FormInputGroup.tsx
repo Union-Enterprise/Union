@@ -5,6 +5,7 @@ export default function FormInputGroup({
   label = "",
   isTextArea = false,
   delayTime = 2,
+  name = ""
 }) {
   return (
     <motion.div
@@ -19,7 +20,7 @@ export default function FormInputGroup({
     >
       {isTextArea ? (
         <textarea
-          name=""
+          name={name}
           id=""
           cols={30}
           rows={10}
@@ -27,6 +28,7 @@ export default function FormInputGroup({
         ></textarea>
       ) : (
         <input
+          name={name}
           type="text"
           className="w-full py-4 bg-transparent border-0 border-transparent border-b-2 border-white outline-none focus:border-main-purple focus:rounded-md peer opacity-80 focus:opacity-100"
           autoComplete="off"

@@ -19,6 +19,8 @@ import AnimatedText from "./ui/components/AnimatedText";
 import BorderGradient from "./ui/components/BorderGradient";
 import GenericCard from "./ui/components/GenericCard";
 
+import emailjs from 'emailjs-com';
+
 export default function Home() {
   const [showDevs, setShowDevs] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
@@ -32,6 +34,19 @@ export default function Home() {
   };
 
   const contentRef = useRef(null);
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+  
+    emailjs.sendForm('service_9l5f0zw', 'template_663fyav', e.target as HTMLFormElement, 'Xts0UwNohpeU1f3pZ')
+      .then((result) => {
+        console.log(result.text);
+        alert('Mensagem enviada com sucesso!');
+      }, (error) => {
+        console.log(error.text);
+        alert('Erro ao enviar a mensagem.');
+      });
+  }
 
   useEffect(() => {
     if (showDevs) {
@@ -348,14 +363,14 @@ export default function Home() {
           </Button>
         </div>
 
-        <form className="flex flex-col gap-y-16">
+        <form className="flex flex-col gap-y-16" onSubmit={sendEmail}>
           <div className="flex justify-between gap-10 *:w-full">
-            <FormInputGroup label="Nome" />
-            <FormInputGroup label="Sobrenome" delayTime={2.5} />
+            <FormInputGroup label="Nome" name="name"/>
+            <FormInputGroup label="Sobrenome" delayTime={2.5} name="lastname"/>
           </div>
-          <FormInputGroup label="E-mail da empresa" delayTime={3} />
-          <FormInputGroup label="Assunto" delayTime={3.5} />
-          <FormInputGroup label="Mensagem" isTextArea={true} delayTime={4} />
+          <FormInputGroup label="E-mail da empresa" delayTime={3} name="email"/>
+          <FormInputGroup label="Assunto" delayTime={3.5} name="subject"/>
+          <FormInputGroup label="Mensagem" isTextArea={true} delayTime={4} name="message"/>
           <button
             type="submit"
             className="py-3 bg-main-purple border-2 border-transparent rounded-md hover:border-main-purple hover:bg-transparent"
