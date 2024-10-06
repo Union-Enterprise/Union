@@ -19,7 +19,7 @@ import AnimatedText from "./ui/components/AnimatedText";
 import BorderGradient from "./ui/components/BorderGradient";
 import GenericCard from "./ui/components/GenericCard";
 
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 export default function Home() {
   const [showDevs, setShowDevs] = useState(false);
@@ -37,16 +37,25 @@ export default function Home() {
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
-  
-    emailjs.sendForm('service_9l5f0zw', 'template_663fyav', e.target as HTMLFormElement, 'Xts0UwNohpeU1f3pZ')
-      .then((result) => {
-        console.log(result.text);
-        alert('Mensagem enviada com sucesso!');
-      }, (error) => {
-        console.log(error.text);
-        alert('Erro ao enviar a mensagem.');
-      });
-  }
+
+    emailjs
+      .sendForm(
+        "service_9l5f0zw",
+        "template_663fyav",
+        e.target as HTMLFormElement,
+        "Xts0UwNohpeU1f3pZ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Mensagem enviada com sucesso!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Erro ao enviar a mensagem.");
+        }
+      );
+  };
 
   useEffect(() => {
     if (showDevs) {
@@ -58,7 +67,7 @@ export default function Home() {
 
   return (
     <main
-    id="home"
+      id="home"
       ref={contentRef}
       className="bg-white flex h-full flex-col items-center justify-between *:w-full"
     >
@@ -255,42 +264,46 @@ export default function Home() {
         </div>
       </section>
 
-        <section id="iacademy" className=" bg-gradient-to-b bg-white px-[200px] py-[100px] flex flex-col gap-20">
-          <h3 className="text-7xl font-bold text-main-purple">Nosso projeto</h3>
-          <div className="grid grid-cols-2 items-center justify-center bg-mainBlue/90 rounded-md p-10 gap-[120px]">
+      <section
+        id="iacademy"
+        className=" bg-gradient-to-b bg-white px-[200px] py-[100px] flex flex-col gap-20"
+      >
+        <h3 className="text-7xl font-bold text-main-purple">Nosso projeto</h3>
+        <div className="grid grid-cols-2 items-center justify-center bg-mainBlue/90 rounded-md p-10 gap-[120px]">
+          <Image
+            src={"/IAcademy.png"}
+            width={2500}
+            height={2500}
+            alt="Picture of the author"
+            className="rounded-xl"
+          />
+          <div className="flex flex-col gap-10 *:text-right items-end">
             <Image
-              src={"/IAcademy.png"}
-              width={2500}  
-              height={2500}  
+              src={"/iacademy.svg"}
+              width={350}
+              height={150}
               alt="Picture of the author"
               className="rounded-xl"
             />
-            <div className="flex flex-col gap-10 *:text-right items-end">
-              <Image
-                src={"/iacademy.svg"}
-                width={350}
-                height={150}
-                alt="Picture of the author"
-                className="rounded-xl"
-              />
-              <p className="max-w[80%] text-xl">
-                O IAcademy é o principal projeto da Union. Consiste em uma plataforma de
-                ensino gameficada, voltada para o público estudantil que deseja se
-                preparar para vestibulares como o Enem. Mas o seu diferencial está na
-                utilização de Inteligência Artificial para auxiliar os estudantes durante
-                suas jornadas de estudos.
-              </p>
-              <p className="text-2xl">Gostou da ideia?</p>
-              <div
-                className="text-main-purple h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-white duration-200 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white hover:px-8 group/button hover:font-semibold"
+            <p className="max-w-[80%] text-xl">
+              O IAcademy é o principal projeto da Union. Consiste em uma
+              plataforma de ensino gameficada, voltada para o público estudantil
+              que deseja se preparar para vestibulares como o Enem. Mas o seu
+              diferencial está na utilização de Inteligência Artificial para
+              auxiliar os estudantes durante suas jornadas de estudos.
+            </p>
+            <p className="text-2xl">Gostou da ideia?</p>
+            <div className="text-main-purple h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-white duration-200 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white hover:px-8 group/button hover:font-semibold">
+              <Link
+                key={"http://localhost:3001/"}
+                href={"http://localhost:3001/"}
               >
-                <Link key={"http://localhost:3001/"} href={"http://localhost:3001/"}>
-                  <p>Conheça o projeto</p>
-                </Link>
-              </div>
+                <p>Conheça o projeto</p>
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       <section className=" bg-[#040404] bg-gradient-to-b from-[#040404] to-90%  to-[rgba(117,63,243,0.3)] py-[160px] flex flex-col justify-center items-center gap-10">
         <h2 className="font-semibold text-8xl text-center">
@@ -362,12 +375,21 @@ export default function Home() {
 
         <form className="flex flex-col gap-y-16" onSubmit={sendEmail}>
           <div className="flex justify-between gap-10 *:w-full">
-            <FormInputGroup label="Nome" name="name"/>
-            <FormInputGroup label="Sobrenome" delayTime={2.5} name="lastname"/>
+            <FormInputGroup label="Nome" name="name" />
+            <FormInputGroup label="Sobrenome" delayTime={2.5} name="lastname" />
           </div>
-          <FormInputGroup label="E-mail da empresa" delayTime={3} name="email"/>
-          <FormInputGroup label="Assunto" delayTime={3.5} name="subject"/>
-          <FormInputGroup label="Mensagem" isTextArea={true} delayTime={4} name="message"/>
+          <FormInputGroup
+            label="E-mail da empresa"
+            delayTime={3}
+            name="email"
+          />
+          <FormInputGroup label="Assunto" delayTime={3.5} name="subject" />
+          <FormInputGroup
+            label="Mensagem"
+            isTextArea={true}
+            delayTime={4}
+            name="message"
+          />
           <button
             type="submit"
             className="py-3 bg-main-purple border-2 border-transparent rounded-md hover:border-main-purple hover:bg-transparent"
