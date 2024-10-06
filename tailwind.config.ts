@@ -26,6 +26,7 @@ const config: Config = {
         "back-card": "#C6DAF7",
         "wm-main-background": "#FAFAFA",
         "wm-p-color": "rgba(0, 0, 0, 0.6)",
+        mainBlue: "#1865F2",
         "wm-border-color": "#F1F1F1",
         "tertiary-blue": "#071B43",
         "linear-dark-blue": "#050D24",

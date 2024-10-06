@@ -255,46 +255,43 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="iacademy" className=" bg-gradient-to-b bg-white px-[200px] py-[100px] flex flex-col gap-20">
-        <h3 className="text-7xl font-bold text-main-purple">Nosso projeto</h3>
-        <div className="grid grid-cols-2 items-center justify-center bg-main-purple rounded-md p-20 gap-[120px]">
-          <Image
-            src={"/mockup-iacademy.png"}
-            width={1000}
-            height={1200}
-            alt="Picture of the author"
-            className="rounded-xl"
-          />
-          <div className="flex flex-col gap-10 *:text-right items-end">
+        <section id="iacademy" className=" bg-gradient-to-b bg-white px-[200px] py-[100px] flex flex-col gap-20">
+          <h3 className="text-7xl font-bold text-main-purple">Nosso projeto</h3>
+          <div className="grid grid-cols-2 items-center justify-center bg-mainBlue/90 rounded-md p-10 gap-[120px]">
             <Image
-              src={"/iacademy.svg"}
-              width={350}
-              height={150}
+              src={"/IAcademy.png"}
+              width={2500}  
+              height={2500}  
               alt="Picture of the author"
               className="rounded-xl"
             />
-            <p className="max-w[80%] text-xl">
-              O IAcademy é o principal projeto da Union. Consiste em uma
-              plataforma de ensino gameficada, voltada para o público estudantil
-              que deseja se preparar para vestibulares como o Enem. Mas o seu
-              diferencial está na utilização de Inteligência Artificial para
-              auxiliar os estudantes durante suas jornadas de estudos.
-            </p>
-            <p className="text-2xl">Gostou da ideia?</p>
-            <div
-              className="text-main-purple h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-white duration-200 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white hover:px-8 group/button hover:font-semibold
-      "
-            >
-              <Link
-                key={"http://localhost:3001/"}
-                href={"http://localhost:3001/"}
+            <div className="flex flex-col gap-10 *:text-right items-end">
+              <Image
+                src={"/iacademy.svg"}
+                width={350}
+                height={150}
+                alt="Picture of the author"
+                className="rounded-xl"
+              />
+              <p className="max-w[80%] text-xl">
+                O IAcademy é o principal projeto da Union. Consiste em uma plataforma de
+                ensino gameficada, voltada para o público estudantil que deseja se
+                preparar para vestibulares como o Enem. Mas o seu diferencial está na
+                utilização de Inteligência Artificial para auxiliar os estudantes durante
+                suas jornadas de estudos.
+              </p>
+              <p className="text-2xl">Gostou da ideia?</p>
+              <div
+                className="text-main-purple h-[50px] px-6 flex items-center justify-center rounded-md w-fit bg-white duration-200 cursor-pointer border-2 border-transparent hover:bg-transparent hover:text-white hover:border-white hover:px-8 group/button hover:font-semibold"
               >
-                <p>Conheça o projeto</p>
-              </Link>
+                <Link key={"http://localhost:3001/"} href={"http://localhost:3001/"}>
+                  <p>Conheça o projeto</p>
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
       <section className=" bg-[#040404] bg-gradient-to-b from-[#040404] to-90%  to-[rgba(117,63,243,0.3)] py-[160px] flex flex-col justify-center items-center gap-10">
         <h2 className="font-semibold text-8xl text-center">
           Pronto para começar <br /> a criar?
