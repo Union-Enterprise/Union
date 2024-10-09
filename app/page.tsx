@@ -35,6 +35,8 @@ export default function Home() {
 
   const contentRef = useRef(null);
 
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -48,15 +50,14 @@ export default function Home() {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Mensagem enviada com sucesso!");
+          setShowSuccessMessage(true);
+          setTimeout(() => setShowSuccessMessage(false), 2000);
         },
         (error) => {
           console.log(error.text);
-          alert("Erro ao enviar a mensagem.");
         }
       );
   };
-
   useEffect(() => {
     if (showDevs) {
       document.body.style.overflow = "hidden";
@@ -397,7 +398,14 @@ export default function Home() {
             Enviar
           </button>
         </form>
+
       </section>
+      {showSuccessMessage && (
+        <div className="fixed bottom-1 right-5 bg-green-500 text-white p-4 rounded-md shadow-md flex items-center whitespace-nowrap">
+          Mensagem enviada com sucesso!
+        </div>
+      )}
+
     </main>
   );
 }
