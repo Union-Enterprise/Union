@@ -8,7 +8,7 @@ import { faCode } from "@fortawesome/free-solid-svg-icons";
 
 export default function Card({ title = "", description = "", icon = faCode }) {
   return (
-    <div className="p-10 h-[400px] w-full border-2 border-[#e7e7e7] rounded-lg flex flex-col gap-5 hover:border-main-purple hover:-translate-y-4 group">
+    <div className="p-10 h-[350px] w-full border-2 border-[#e7e7e7] rounded-lg flex flex-col gap-5 hover:border-main-purple hover:-translate-y-4 group">
       <FontAwesomeIcon
         icon={icon}
         size="3x"

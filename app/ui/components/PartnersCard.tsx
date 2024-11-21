@@ -13,7 +13,7 @@ export default function PartnersCard({
       key={name}
       href={href}
       style={{ backgroundImage: `url(${src})` }}
-      className="bg-no-repeat bg-contain bg-center h-full w-[800px] flex-shrink-0 border-2 border-[#e7e7e7] radius-md overflow-hidden group rounded-md"
+      className="bg-no-repeat bg-contain bg-center h-[250px] flex-shrink-0 border-2 border-[#e7e7e7] radius-md overflow-hidden group rounded-md"
     >
       <div className="*:text-white text-3xl font-thin opacity-0 group-hover:opacity-100 w-full bg-[rgba(0,0,0,0.6)] h-full justify-center items-center flex gap-5">
         <p>{name}</p>

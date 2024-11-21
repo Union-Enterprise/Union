@@ -73,10 +73,9 @@ export default function Home() {
       className="bg-white flex h-full flex-col items-center justify-between *:w-full"
     >
       <section className="h-screen bg-white justify-center flex flex-col gap-10 items-center relative">
-        {/* <BorderGradient /> */}
         <AnimatedText
           text="Construindo o amanhã com tecnologia."
-          classname="text-8xl text-black inline whitespace-normal w-[60vw] break-words text-center font-bold"
+          classname="text-8xl text-black inline whitespace-normal w-[55vw] break-words text-center font-bold"
         />
         <p className="text-p-gray max-w-[50%] text-2xl text-center">
           Desenvolvemos soluções inovadoras que resolvem problemas reais e
@@ -91,7 +90,7 @@ export default function Home() {
       </section>
 
       <section className="flex flex-col gap-10 py-[160px]">
-        <div className="flex flex-col gap-6 max-w-[50%] pl-[200px]">
+        <div className="flex flex-col gap-6 max-w-[55%] pl-[200px]">
           <h2 className="text-7xl text-p-black font-semibold">
             Por que desenvolver com a Union?
           </h2>
@@ -319,17 +318,17 @@ export default function Home() {
       </section>
       <section
         id="partners"
-        className="bg-white  py-[160px] h-[100vh] flex flex-col gap-10 relative"
+        className="bg-white  py-[160px] flex flex-col gap-10 relative"
       >
         <div className="flex justify-between items-end mx-[200px]">
           <h2 className="text-7xl text-black font-semibold">
             Conheça também <br /> nossos parceiros
           </h2>
-          <CarrousselButtons />
+          {/* <CarrousselButtons /> */}
         </div>
         <div
           id="partnersCarroussel"
-          className="h-full w-full flex gap-5 px-[200px] overflow-x-hidden"
+          className="grid grid-cols-3  h-full w-full gap-5 px-[200px] overflow-x-hidden"
         >
           <PartnersCard name="Elysium" src="/elysium.png" />
           <PartnersCard name="Target" src="/target.png" />
@@ -398,14 +397,12 @@ export default function Home() {
             Enviar
           </button>
         </form>
-
+        {showSuccessMessage && (
+          <div className="absolute z-50 bottom-40 left-5 bg-green-500 w-fit text-white p-4 rounded-md shadow-md flex items-center whitespace-nowrap">
+            Mensagem enviada com sucesso!
+          </div>
+        )}
       </section>
-      {showSuccessMessage && (
-        <div className="fixed bottom-1 right-5 bg-green-500 text-white p-4 rounded-md shadow-md flex items-center whitespace-nowrap">
-          Mensagem enviada com sucesso!
-        </div>
-      )}
-
     </main>
   );
 }
